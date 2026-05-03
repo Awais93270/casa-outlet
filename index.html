@@ -426,8 +426,8 @@ footer{background:var(--cream2);border-top:1px solid var(--border);padding:48px 
       <ul>
         <li><a href="#">Accueil</a></li>
         <li><a href="#collection">Collection</a></li>
-        <li><a href="#" onclick="filterProducts('Tennis',null);return false">Tennis Club</a></li>
-        <li><a href="#" onclick="filterProducts('Noir',null);return false">Modèles Noir</a></li>
+        <li><a href="#collection" onclick="filterProducts('Tennis',null);document.getElementById('collection').scrollIntoView({behavior:'smooth'});return false">Tennis Club</a></li>
+        <li><a href="#collection" onclick="filterProducts('Noir',null);document.getElementById('collection').scrollIntoView({behavior:'smooth'});return false">Modèles Noir</a></li>
       </ul>
     </div>
     <div class="footer-col">
@@ -783,19 +783,20 @@ function renderFAQ(){
   FAQ.forEach((item,i)=>{
     const el=document.createElement('div');
     el.style.cssText='border-top:1px solid var(--border);overflow:hidden';
-    el.innerHTML=`<button onclick="toggleFAQ(this)" style="width:100%;text-align:left;padding:20px 0;display:flex;justify-content:space-between;align-items:center;background:none;border:none;cursor:pointer;font-family:inherit"><span style="font-family:\'Cormorant Garamond\',serif;font-size:1.05rem;font-weight:500;color:var(--ink);padding-right:24px">${item.q}</span><span class="faq-icon" style="font-size:1.2rem;color:var(--gold);flex-shrink:0;transition:transform .3s">+</span></button><div class="faq-body" style="max-height:0;overflow:hidden;transition:max-height .4s ease"><p style="padding:0 0 20px;font-size:.83rem;color:var(--ink3);line-height:1.75">${item.a}</p></div>`;
+    el.innerHTML=`<button type="button" onclick="toggleFAQ(event,this)" style="width:100%;text-align:left;padding:20px 0;display:flex;justify-content:space-between;align-items:center;background:none;border:none;cursor:pointer;font-family:inherit"><span style="font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:500;color:var(--ink);padding-right:24px">${item.q}</span><span class="faq-icon" style="font-size:1.2rem;color:var(--gold);flex-shrink:0;transition:transform .3s">+</span></button><div class="faq-body" style="max-height:0;overflow:hidden;transition:max-height .4s ease"><p style="padding:0 0 20px;font-size:.83rem;color:var(--ink3);line-height:1.75">${item.a}</p></div>`;
     list.appendChild(el);
   });
   const last=document.createElement('div');last.style.borderTop='1px solid var(--border)';
   list.appendChild(last);
 }
-function toggleFAQ(btn){
+function toggleFAQ(e,btn){
+  e.stopPropagation();e.preventDefault();
   const body=btn.nextElementSibling;
   const icon=btn.querySelector('.faq-icon');
-  const isOpen=body.style.maxHeight!=='0px'&&body.style.maxHeight!=='';
-  document.querySelectorAll('.faq-body').forEach(b=>b.style.maxHeight='0');
+  const isOpen=body.style.maxHeight&&body.style.maxHeight!=='0px';
+  document.querySelectorAll('.faq-body').forEach(b=>b.style.maxHeight='0px');
   document.querySelectorAll('.faq-icon').forEach(ic=>{ic.textContent='+';ic.style.transform='rotate(0deg)'});
-  if(!isOpen){body.style.maxHeight=body.scrollHeight+'px';icon.textContent='−';icon.style.transform='rotate(0deg)'}
+  if(!isOpen){body.style.maxHeight=body.scrollHeight+'px';icon.textContent='−';}
 }
 
 window.addEventListener('scroll',()=>{
