@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Casablanca Paris : l'histoire derrière la marque la plus convoitée du moment — CasaOutlet</title>
+<meta name="description" content="Découvrez l'univers de Casablanca Paris — entre tennis, art africain et dolce vita. Pourquoi cette maison française est devenue l'emblème du luxe décontracté.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+img{display:block;max-width:100%}
+a{text-decoration:none;color:inherit}
+
+:root{
+  --cream:#F5F0E8;
+  --cream2:#EDE8DF;
+  --cream3:#E5DFD4;
+  --ink:#0C0A08;
+  --ink2:#2A2520;
+  --ink3:#6B6560;
+  --gold:#C8A96E;
+  --gold2:#A88B52;
+  --white:#FFFFFF;
+  --border:rgba(12,10,8,.12);
+  --ease:.3s cubic-bezier(.25,.46,.45,.94);
+  --spring:.55s cubic-bezier(.16,1,.3,1);
+}
+
+body{font-family:'Inter',sans-serif;background:var(--cream);color:var(--ink);overflow-x:hidden}
+
+/* ── ANNOUNCEMENT ── */
+.ann-bar{background:var(--ink);color:var(--cream);text-align:center;padding:10px 20px;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;font-weight:500;overflow:hidden}
+.ann-bar span{display:inline-block;white-space:nowrap;animation:marquee 30s linear infinite}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ── NAV ── */
+nav{position:sticky;top:0;z-index:900;background:var(--cream);border-bottom:1px solid var(--border);padding:0 48px;display:flex;align-items:center;justify-content:space-between;height:64px;transition:box-shadow .3s}
+nav.scrolled{box-shadow:0 2px 20px rgba(0,0,0,.07)}
+.nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase}
+.nav-logo span{color:var(--gold)}
+.nav-back{font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;font-weight:500;color:var(--ink3);display:flex;align-items:center;gap:8px;transition:color .2s}
+.nav-back:hover{color:var(--ink)}
+.nav-back::before{content:'←'}
+
+/* ── HERO ARTICLE ── */
+.article-hero{background:var(--ink);padding:100px 80px 80px;position:relative;overflow:hidden}
+.article-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 65% 40%,rgba(200,169,110,.12) 0%,transparent 55%)}
+.article-hero-inner{max-width:820px;margin:0 auto;position:relative;z-index:2}
+.article-cat{display:inline-flex;align-items:center;gap:10px;font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:28px}
+.article-cat::before{content:'';display:block;width:24px;height:1px;background:var(--gold)}
+.article-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2.8rem,6vw,5.2rem);font-weight:300;color:var(--white);line-height:1.07;letter-spacing:-.01em;margin-bottom:24px}
+.article-title em{font-style:italic;color:var(--gold)}
+.article-excerpt{font-size:1.05rem;color:rgba(245,240,232,.55);line-height:1.7;max-width:620px;margin-bottom:48px}
+.article-meta{display:flex;align-items:center;gap:28px;flex-wrap:wrap;padding-top:32px;border-top:1px solid rgba(245,240,232,.1)}
+.meta-item{font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(245,240,232,.3);font-weight:500}
+.meta-item span{color:rgba(245,240,232,.55);font-weight:400;letter-spacing:0;text-transform:none;font-size:.78rem;font-family:'Cormorant Garamond',serif;font-style:italic}
+
+/* ── FEATURED IMAGE ── */
+.featured-img{width:100%;aspect-ratio:16/7;overflow:hidden;background:var(--cream2)}
+.featured-img img{width:100%;height:100%;object-fit:cover;object-position:center 25%}
+
+/* ── ARTICLE BODY ── */
+.article-body{max-width:720px;margin:0 auto;padding:80px 40px}
+
+.lead{font-family:'Cormorant Garamond',serif;font-size:1.45rem;font-weight:300;font-style:italic;line-height:1.6;color:var(--ink2);margin-bottom:48px;padding-bottom:48px;border-bottom:1px solid var(--border)}
+
+.article-body h2{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:500;color:var(--ink);line-height:1.2;margin:56px 0 20px}
+.article-body h3{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:500;color:var(--ink);margin:40px 0 14px}
+.article-body p{font-size:.92rem;color:var(--ink2);line-height:1.85;margin-bottom:22px}
+.article-body p:last-of-type{margin-bottom:0}
+
+.pull-quote{background:var(--ink);padding:48px 56px;margin:56px -80px;position:relative}
+.pull-quote::before{content:'"';font-family:'Cormorant Garamond',serif;font-size:8rem;color:var(--gold);opacity:.15;position:absolute;top:-10px;left:32px;line-height:1}
+.pull-quote p{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:300;font-style:italic;color:var(--white);line-height:1.4;margin:0;position:relative;z-index:1}
+.pull-quote cite{display:block;margin-top:16px;font-size:.65rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:600;font-style:normal}
+
+.inline-img{margin:48px -40px;overflow:hidden}
+.inline-img img{width:100%;aspect-ratio:3/2;object-fit:cover}
+.inline-img figcaption{font-size:.7rem;color:var(--ink3);letter-spacing:.08em;text-transform:uppercase;padding:10px 40px 0;text-align:center}
+
+.highlight-box{background:var(--cream2);border-left:3px solid var(--gold);padding:28px 32px;margin:40px 0}
+.highlight-box p{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-style:italic;color:var(--ink2);line-height:1.6;margin:0}
+
+.key-facts{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);margin:56px 0}
+.key-fact{background:var(--cream);padding:28px 24px;text-align:center}
+.fact-num{font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:500;color:var(--ink);line-height:1}
+.fact-label{font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink3);margin-top:6px}
+
+.article-tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:56px;padding-top:40px;border-top:1px solid var(--border)}
+.tag{border:1px solid var(--border);padding:7px 16px;border-radius:100px;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;font-weight:500;color:var(--ink3)}
+
+/* ── AUTHOR BIO ── */
+.author-bio{max-width:720px;margin:0 auto 80px;padding:0 40px}
+.bio-inner{background:var(--cream2);padding:32px;display:flex;align-items:center;gap:24px;border:1px solid var(--border)}
+.bio-avatar{width:64px;height:64px;border-radius:50%;background:var(--gold);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:500;color:var(--ink);flex-shrink:0}
+.bio-name{font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:500;color:var(--ink);margin-bottom:4px}
+.bio-role{font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:8px}
+.bio-text{font-size:.78rem;color:var(--ink3);line-height:1.6}
+
+/* ── CTA ARTICLE ── */
+.article-cta{background:var(--ink);padding:80px;text-align:center;position:relative;overflow:hidden}
+.article-cta::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 50%,rgba(200,169,110,.1) 0%,transparent 60%)}
+.article-cta-eyebrow{font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:16px;display:flex;align-items:center;justify-content:center;gap:10px}
+.article-cta-eyebrow::before,.article-cta-eyebrow::after{content:'';display:block;width:24px;height:1px;background:var(--gold)}
+.article-cta h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3.4rem);font-weight:300;color:var(--white);line-height:1.1;margin-bottom:16px;position:relative;z-index:1}
+.article-cta h2 em{font-style:italic;color:var(--gold)}
+.article-cta p{font-size:.86rem;color:rgba(245,240,232,.45);max-width:420px;margin:0 auto 36px;line-height:1.7;position:relative;z-index:1}
+.cta-btn{display:inline-block;background:var(--gold);color:var(--ink);padding:16px 44px;font-size:.75rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700;transition:background .2s,transform .15s;position:relative;z-index:1}
+.cta-btn:hover{background:var(--gold2);transform:translateY(-1px)}
+
+/* ── RELATED ── */
+.related{padding:80px;background:var(--cream2);border-top:1px solid var(--border)}
+.related-title{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:500;color:var(--ink);margin-bottom:40px;display:flex;align-items:center;gap:16px}
+.related-title::after{content:'';flex:1;height:1px;background:var(--border)}
+.related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border)}
+.related-card{background:var(--cream);overflow:hidden;cursor:pointer}
+.related-card:hover .related-img img{transform:scale(1.04)}
+.related-img{aspect-ratio:16/9;overflow:hidden;background:var(--cream3)}
+.related-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s var(--ease)}
+.related-info{padding:20px 20px 24px}
+.related-cat{font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:8px}
+.related-name{font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:500;color:var(--ink);line-height:1.3}
+
+/* ── FOOTER ── */
+footer{background:var(--cream2);border-top:1px solid var(--border);padding:48px 80px 32px}
+.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px}
+.footer-logo{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:600;letter-spacing:.08em;margin-bottom:12px}
+.footer-logo span{color:var(--gold)}
+.footer-desc{font-size:.78rem;color:var(--ink3);line-height:1.7;max-width:240px}
+.footer-col h4{font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink3);font-weight:600;margin-bottom:16px}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+.footer-col li a{font-size:.78rem;color:var(--ink2);transition:color .2s}
+.footer-col li a:hover{color:var(--ink)}
+.footer-bottom{border-top:1px solid var(--border);padding-top:20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.footer-copy{font-size:.68rem;color:var(--ink3);letter-spacing:.06em}
+
+/* ── SCROLL TOP ── */
+.scroll-top{position:fixed;bottom:24px;right:24px;width:42px;height:42px;background:var(--ink);color:var(--cream);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.9rem;z-index:500;opacity:0;pointer-events:none;transition:opacity .3s,transform .3s;transform:translateY(8px);cursor:pointer;border:none}
+.scroll-top.visible{opacity:1;pointer-events:auto;transform:translateY(0)}
+.scroll-top:hover{background:var(--ink2)}
+
+/* ── RESPONSIVE ── */
+@media(max-width:900px){
+  .article-hero{padding:72px 40px 60px}
+  .pull-quote{margin:48px -40px;padding:36px 40px}
+  .inline-img{margin:40px -24px}
+  .key-facts{grid-template-columns:1fr 1fr}
+  .related-grid{grid-template-columns:1fr 1fr}
+  .related{padding:56px 40px}
+  footer{padding:40px 40px 24px}
+  .footer-top{grid-template-columns:1fr 1fr}
+  .article-cta{padding:56px 40px}
+}
+@media(max-width:640px){
+  nav{padding:0 20px}
+  .article-hero{padding:56px 24px 48px}
+  .article-body{padding:56px 24px}
+  .article-body h2{margin:44px 0 16px}
+  .pull-quote{margin:40px -24px;padding:32px 28px}
+  .pull-quote p{font-size:1.3rem}
+  .inline-img{margin:32px -8px}
+  .inline-img figcaption{padding:8px 8px 0}
+  .key-facts{grid-template-columns:1fr}
+  .related-grid{grid-template-columns:1fr}
+  .related{padding:40px 20px}
+  footer{padding:32px 20px 20px}
+  .footer-top{grid-template-columns:1fr}
+  .article-cta{padding:48px 24px}
+  .author-bio{padding:0 24px;margin-bottom:56px}
+  .bio-inner{flex-direction:column;text-align:center}
+}
+</style>
+</head>
+<body>
+
+<!-- ANNOUNCEMENT -->
+<div class="ann-bar">
+  <span>Livraison offerte dès 150€ &nbsp;·&nbsp; T-shirts Casablanca Paris en édition outlet &nbsp;·&nbsp; Jusqu'à -55% sur les prix officiels &nbsp;·&nbsp; 100% coton biologique &nbsp;·&nbsp; Expédition sous 24h &nbsp;·&nbsp; Livraison offerte dès 150€ &nbsp;·&nbsp; T-shirts Casablanca Paris en édition outlet &nbsp;·&nbsp; Jusqu'à -55% sur les prix officiels &nbsp;·&nbsp; 100% coton biologique &nbsp;·&nbsp; Expédition sous 24h &nbsp;·&nbsp;</span>
+</div>
+
+<!-- NAV -->
+<nav id="mainNav">
+  <a href="index.html" class="nav-logo">Casa<span>Outlet</span></a>
+  <a href="index.html" class="nav-back">Retour à la boutique</a>
+</nav>
+
+<!-- HERO ARTICLE -->
+<header class="article-hero">
+  <div class="article-hero-inner">
+    <div class="article-cat">Marque · Univers · Histoire</div>
+    <h1 class="article-title">
+      Casablanca Paris —<br>
+      le luxe <em>réinventé</em><br>
+      entre deux raquettes.
+    </h1>
+    <p class="article-excerpt">Comment une maison parisienne née en 2018 est devenue l'une des marques les plus désirées au monde, en moins de cinq ans — et pourquoi ses imprimés racontent une histoire que personne d'autre ne sait raconter.</p>
+    <div class="article-meta">
+      <div class="meta-item">Rédigé par <span>Équipe CasaOutlet</span></div>
+      <div class="meta-item">Lecture <span>8 minutes</span></div>
+      <div class="meta-item">Publié le <span>2 mai 2024</span></div>
+    </div>
+  </div>
+</header>
+
+<!-- FEATURED IMAGE -->
+<div class="featured-img">
+  <img src="https://cdn.shopify.com/s/files/1/0757/4156/1098/files/blanc13.1.png?v=1717511802" alt="Casablanca Paris — Vibrations Mentales">
+</div>
+
+<!-- ARTICLE BODY -->
+<article class="article-body">
+
+  <p class="lead">Il y a des marques qui existent pour vendre des vêtements. Et puis il y a Casablanca Paris — une maison qui, depuis ses premières collections, ne vend pas de tissu. Elle vend une sensation : celle d'être perpétuellement en vacances, quelque part entre Marrakech et la Côte d'Azur, une raquette à la main.</p>
+
+  <h2>L'origine : un état d'esprit, pas un lieu</h2>
+
+  <p>En 2018, Charaf Tajer — fils d'immigrants marocains élevé à Paris — fonde Casablanca avec une idée simple et radicale : créer des vêtements qui portent en eux l'insouciance du tennis club des années 70. Non pas le sport lui-même, mais ce moment suspendu entre deux sets — le verre d'eau citronnée, la conversation sous les oliviers, la chemise à moitié ouverte.</p>
+
+  <p>Tajer n'est pas styliste de formation. Il est entrepreneur, musicien, directeur artistique. Il a co-fondé le club parisien Castel avant de se lancer dans la mode. Et ça change tout. Casablanca n'est pas née dans une école de mode. Elle est née dans une culture — celle du plaisir, de l'oisiveté assumée, du luxe qui se porte sans effort.</p>
+
+  <div class="highlight-box">
+    <p>« Je voulais créer des vêtements qui font sentir en vacances, même le lundi matin dans le métro parisien. »</p>
+  </div>
+
+  <h2>Le tennis club imaginaire</h2>
+
+  <p>La référence au tennis est omniprésente dans l'univers Casablanca — mais pas au tennis tel qu'on le connaît. C'est une version fantasmée, presque hallucinée, d'un club de tennis qui n'a jamais vraiment existé. Un endroit où les courts seraient recouverts de motifs orientaux, où les joueurs porteraient des imprimés inspirés de l'art africain, où la victoire se célébrerait au son d'un orchestre cubain.</p>
+
+  <p>Cette liberté narrative est ce qui distingue Casablanca de toutes les autres marques qui se réclament du sportswear de luxe. Là où ses concurrents cherchent à être précis — une esthétique définie, un territoire clair — Casablanca cherche à être onirique. Chaque collection est un voyage dans un endroit qui n'existe que dans l'imagination de son fondateur.</p>
+
+  <div class="pull-quote">
+    <p>Le luxe ne devrait pas être sérieux. Il devrait être joyeux, coloré, vivant — comme une après-midi sur un court de tennis quelque part en Méditerranée.</p>
+    <cite>Charaf Tajer, fondateur de Casablanca Paris</cite>
+  </div>
+
+  <h2>Les imprimés : là où tout commence</h2>
+
+  <p>Si vous deviez réduire Casablanca à une seule chose, ce serait ses imprimés. Ces grandes compositions graphiques qui recouvrent les t-shirts, les chemises, les shorts — et qui sont immédiatement reconnaissables à l'autre bout d'une rue. Ils puisent dans un répertoire vertigineux : l'art déco, la mosaïque islamique, le constructivisme africain, le pop art brésilien, la peinture orientaliste française.</p>
+
+  <p>Chaque imprimé est une œuvre à part entière. Il raconte quelque chose — un lieu, un souvenir, une émotion. "L'arc de Jour" évoque une architecture mauresque baignée de soleil. "Afro Cubisme" mélange les géométries de l'art africain avec la palette vibrante du muralisme cubain. "Triomphe d'Orange" est une explosion de couleur qui renvoie autant aux tuiles de Séville qu'aux couvertures de magazines des années 80.</p>
+
+  <figure class="inline-img">
+    <img src="https://cdn.shopify.com/s/files/1/0757/4156/1098/files/tennis4.1.png?v=1717511755" alt="Casablanca Paris — Afro Cubisme">
+    <figcaption>Collection Tennis Club — Afro Cubisme (Orangé)</figcaption>
+  </figure>
+
+  <p>Ce qui est remarquable, c'est la cohérence. Malgré la diversité des références, chaque imprimé Casablanca semble appartenir au même univers. C'est la signature d'une direction artistique exceptionnellement maîtrisée — et c'est ce qui justifie les prix, bien au-delà du simple coton biologique utilisé pour la confection.</p>
+
+  <h2>La montée en puissance : de Paris à la planète</h2>
+
+  <p>Le succès de Casablanca n'a pas été immédiat. La marque a mis plusieurs saisons à s'imposer — d'abord auprès des insiders parisiens, puis de la communauté streetwear internationale, et enfin du grand public global. La clé de cette progression ? Un positionnement inhabituel entre le luxe traditionnel et le streetwear — ce que l'industrie appelle le "luxury streetwear" ou, plus précisément, le "sports luxe".</p>
+
+  <p>En 2021, la marque défile pour la première fois à la Fashion Week de Paris et fait l'effet d'une bombe. Les critiques parlent d'une nouvelle vision du luxe français — moins austère, plus solaire, plus inclusive dans son rapport à la culture. Les boutiques multimarques du monde entier se battent pour référencer la collection.</p>
+
+  <div class="key-facts">
+    <div class="key-fact">
+      <div class="fact-num">2018</div>
+      <div class="fact-label">Fondation à Paris</div>
+    </div>
+    <div class="key-fact">
+      <div class="fact-num">60+</div>
+      <div class="fact-label">Points de vente mondiaux</div>
+    </div>
+    <div class="key-fact">
+      <div class="fact-num">5 ans</div>
+      <div class="fact-label">Pour conquérir la planète</div>
+    </div>
+  </div>
+
+  <h2>Le t-shirt comme toile d'expression</h2>
+
+  <p>Dans la hiérarchie des pièces Casablanca, le t-shirt occupe une place particulière. C'est l'article le plus accessible — financièrement et symboliquement — mais aussi celui sur lequel la signature graphique de la maison s'exprime le plus librement. Pas de construction complexe à masquer, pas de coupe à justifier : juste la surface d'expression maximale pour un imprimé.</p>
+
+  <p>Casablanca traite ses t-shirts avec le même soin qu'un tailleur parisien traite un costume. Le coton est biologique, certifié, d'un grammage pensé pour tomber parfaitement. La coupe est oversized mais structurée — cette silhouette qui donne l'impression d'avoir été dessinée pour vous, même achetée en rack. Et les imprimés sont sérigraphiés à haute résolution, avec des encres qui résistent aux années de port et de lavage.</p>
+
+  <p>C'est pour cette raison que porter un t-shirt Casablanca n'est jamais tout à fait banal. Même en jean et baskets, même un mardi matin — la pièce raconte quelque chose. Elle signale une sensibilité, une culture, une façon d'être au monde.</p>
+
+  <h3>Ce que dit votre t-shirt de vous</h3>
+
+  <p>La sociologie de la mode a beaucoup écrit sur ce que nos vêtements disent de nous. Pour Casablanca, le message est assez précis : vous êtes quelqu'un qui sait apprécier les choses belles, qui voyage — ou qui rêve de voyager — et qui ne voit pas de contradiction entre le soin apporté à son apparence et une forme d'insouciance fondamentale.</p>
+
+  <p>Ce n'est pas le luxe ostentatoire du monogramme visible à dix mètres. C'est le luxe de la connaissance — celui qui se reconnaît entre initiés, et qui n'a pas besoin de se justifier aux autres. Une forme de discrétion flamboyante, si le paradoxe vous paraît acceptable.</p>
+
+  <figure class="inline-img">
+    <img src="https://cdn.shopify.com/s/files/1/0757/4156/1098/files/noir8.1.png?v=1717511879" alt="Casablanca Paris — Triomphe d'Orange">
+    <figcaption>Collection Classique — Triomphe d'Orange</figcaption>
+  </figure>
+
+  <h2>L'avenir de la marque : entre héritage et innovation</h2>
+
+  <p>Aujourd'hui, Casablanca Paris continue d'élargir son univers. La marque a ouvert ses premières boutiques en propre à Paris, à Londres et à Tokyo. Elle a lancé des lignes d'accessoires, de parfums, de décoration intérieure — toujours avec cette même cohérence esthétique qui fait sa force. Charaf Tajer parle d'une "maison de vie", à l'image des grandes maisons de luxe françaises, mais dans un registre délibérément plus contemporain.</p>
+
+  <p>Ce qui ne changera pas, c'est l'âme de la marque : cette conviction que le vêtement peut être une œuvre d'art portable, que le luxe peut être joyeux plutôt que solennel, et que les cultures du monde entier ont quelque chose à se dire à travers le fil, le coton et la couleur.</p>
+
+  <p>Dans un paysage de la mode globalisé où les marques se ressemblent de plus en plus, Casablanca Paris reste singulière. Et c'est précisément cette singularité — cultivée avec soin, assumée sans complexe — qui en fait l'une des maisons les plus passionnantes de sa génération.</p>
+
+  <div class="article-tags">
+    <span class="tag">Casablanca Paris</span>
+    <span class="tag">Charaf Tajer</span>
+    <span class="tag">Tennis Club</span>
+    <span class="tag">Luxury Streetwear</span>
+    <span class="tag">Imprimés</span>
+    <span class="tag">Mode Française</span>
+    <span class="tag">Coton Bio</span>
+  </div>
+
+</article>
+
+<!-- AUTHOR BIO -->
+<div class="author-bio">
+  <div class="bio-inner">
+    <div class="bio-avatar">CO</div>
+    <div>
+      <div class="bio-name">Équipe CasaOutlet</div>
+      <div class="bio-role">Rédaction · Univers de marque</div>
+      <p class="bio-text">Passionnés de mode et de culture, nous décryptons l'univers des marques qui comptent. CasaOutlet, votre destination outlet pour les pièces Casablanca Paris — authenticité garantie, prix outlet.</p>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<section class="article-cta">
+  <div class="article-cta-eyebrow">Collection disponible maintenant</div>
+  <h2>Portez <em>l'univers</em><br>Casablanca Paris.</h2>
+  <p>T-shirts iconiques en édition outlet. Jusqu'à -55% sur les prix boutique. Expédition sous 24h.</p>
+  <a href="index.html#collection" class="cta-btn">Découvrir la collection</a>
+</section>
+
+<!-- RELATED -->
+<section class="related">
+  <div class="related-title">Dans le même univers</div>
+  <div class="related-grid">
+    <div class="related-card">
+      <div class="related-img">
+        <img src="https://cdn.shopify.com/s/files/1/0757/4156/1098/files/tennis5.1.png?v=1717511743" alt="Collection Tennis Club">
+      </div>
+      <div class="related-info">
+        <div class="related-cat">Collection · Tennis Club</div>
+        <div class="related-name">Les pièces Tennis Club : quand le sport rencontre l'art</div>
+      </div>
+    </div>
+    <div class="related-card">
+      <div class="related-img">
+        <img src="https://cdn.shopify.com/s/files/1/0757/4156/1098/files/blanc13.2.png?v=1717511802" alt="Guide des tailles">
+      </div>
+      <div class="related-info">
+        <div class="related-cat">Guide · Tailles & Entretien</div>
+        <div class="related-name">Comment prendre soin de votre t-shirt Casablanca Paris</div>
+      </div>
+    </div>
+    <div class="related-card">
+      <div class="related-img">
+        <img src="https://cdn.shopify.com/s/files/1/0757/4156/1098/files/noir8.2.png?v=1717511879" alt="Comment porter">
+      </div>
+      <div class="related-info">
+        <div class="related-cat">Style · Inspiration</div>
+        <div class="related-name">5 façons de porter un t-shirt Casablanca avec style</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div>
+      <div class="footer-logo">Casa<span>Outlet</span></div>
+      <p class="footer-desc">Votre destination outlet pour les t-shirts Casablanca Paris. Imprimés iconiques, coton biologique, prix outlet.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Navigation</h4>
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="index.html#collection">Collection</a></li>
+        <li><a href="index.html#collection">Tennis Club</a></li>
+        <li><a href="index.html#collection">Modèles Noir</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Informations</h4>
+      <ul>
+        <li><a href="#">À propos</a></li>
+        <li><a href="#">Livraison</a></li>
+        <li><a href="#">Retours</a></li>
+        <li><a href="#">Guide des tailles</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Légal</h4>
+      <ul>
+        <li><a href="#">Mentions légales</a></li>
+        <li><a href="#">CGV</a></li>
+        <li><a href="#">Confidentialité</a></li>
+        <li><a href="#">Cookies</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p class="footer-copy">© 2024 CasaOutlet. Tous droits réservés.</p>
+  </div>
+</footer>
+
+<button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<script>
+window.addEventListener('scroll',()=>{
+  document.getElementById('mainNav').classList.toggle('scrolled',scrollY>40);
+  document.getElementById('scrollTop').classList.toggle('visible',scrollY>400);
+});
+</script>
+</body>
+</html>

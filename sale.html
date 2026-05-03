@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CasaOutlet — Jusqu'à -55% · Édition Limitée</title>
+<meta name="description" content="T-shirts Casablanca Paris en édition outlet. Jusqu'à -55% sur les prix officiels. Coton biologique. Expédition 24h.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+img{display:block;max-width:100%}
+button{cursor:pointer;border:none;background:none;font:inherit}
+a{text-decoration:none;color:inherit}
+
+:root{
+  --cream:#F5F0E8;
+  --cream2:#EDE8DF;
+  --cream3:#E5DFD4;
+  --ink:#0C0A08;
+  --ink2:#2A2520;
+  --ink3:#6B6560;
+  --gold:#C8A96E;
+  --gold2:#A88B52;
+  --gold3:#F0D9A8;
+  --red:#C0392B;
+  --white:#FFFFFF;
+  --border:rgba(12,10,8,.12);
+  --ease:.3s cubic-bezier(.25,.46,.45,.94);
+  --spring:.55s cubic-bezier(.16,1,.3,1);
+}
+
+body{font-family:'Inter',sans-serif;background:var(--cream);color:var(--ink);overflow-x:hidden}
+
+/* ── ANNOUNCEMENT ── */
+.ann-bar{background:var(--ink);color:var(--cream);text-align:center;padding:11px 20px;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;font-weight:500;overflow:hidden}
+.ann-bar span{display:inline-block;white-space:nowrap;animation:marquee 28s linear infinite}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ── NAV ── */
+nav{position:sticky;top:0;z-index:900;background:var(--cream);border-bottom:1px solid var(--border);padding:0 48px;display:flex;align-items:center;justify-content:space-between;height:64px;transition:box-shadow .3s}
+nav.scrolled{box-shadow:0 2px 20px rgba(0,0,0,.07)}
+.nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase}
+.nav-logo span{color:var(--gold)}
+.nav-cta-small{background:var(--gold);color:var(--ink);padding:9px 22px;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700;transition:background .2s;display:inline-block}
+.nav-cta-small:hover{background:var(--gold2)}
+
+/* ── HERO ── */
+.hero{background:var(--ink);min-height:90vh;display:grid;grid-template-columns:1fr 1fr;align-items:center;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 70% 50%,rgba(200,169,110,.15) 0%,transparent 55%)}
+.hero-text{padding:80px 56px 80px 80px;position:relative;z-index:2}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:.65rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:28px}
+.hero-eyebrow::before{content:'';display:block;width:28px;height:1px;background:var(--gold)}
+.hero-title{font-family:'Cormorant Garamond',serif;font-size:clamp(3.2rem,6vw,6rem);font-weight:300;color:var(--white);line-height:1.02;letter-spacing:-.01em;margin-bottom:24px}
+.hero-title em{font-style:italic;color:var(--gold)}
+.hero-title strong{font-weight:600}
+.hero-sub{font-size:.9rem;color:rgba(245,240,232,.5);line-height:1.7;max-width:440px;margin-bottom:40px;letter-spacing:.02em}
+.hero-actions{display:flex;flex-direction:column;gap:16px}
+.hero-cta-main{display:inline-block;background:var(--gold);color:var(--ink);padding:18px 44px;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700;transition:background .2s,transform .15s;width:fit-content}
+.hero-cta-main:hover{background:var(--gold2);transform:translateY(-2px)}
+.hero-trust{display:flex;gap:24px;flex-wrap:wrap;margin-top:8px}
+.hero-trust-item{display:flex;align-items:center;gap:7px;font-size:.7rem;color:rgba(245,240,232,.45);letter-spacing:.04em}
+.hero-trust-item svg{flex-shrink:0;opacity:.6}
+.hero-img-col{position:relative;height:100%;min-height:90vh;overflow:hidden}
+.hero-img-col img{width:100%;height:100%;object-fit:cover;object-position:top center}
+.hero-img-overlay{position:absolute;inset:0;background:linear-gradient(to right,rgba(12,10,8,.6) 0%,transparent 40%)}
+.hero-badge-float{position:absolute;bottom:40px;right:40px;background:rgba(200,169,110,.15);border:1px solid var(--gold);padding:20px 24px;text-align:center;z-index:10;backdrop-filter:blur(8px)}
+.hero-badge-pct{font-family:'Cormorant Garamond',serif;font-size:2.8rem;font-weight:600;color:var(--gold);line-height:1}
+.hero-badge-label{font-size:.58rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(245,240,232,.6);margin-top:4px}
+
+/* ── URGENCY BAR ── */
+.urgency-bar{background:var(--gold);padding:14px 24px;display:flex;align-items:center;justify-content:center;gap:24px;flex-wrap:wrap}
+.urgency-text{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--ink)}
+.timer{display:flex;gap:6px;align-items:center}
+.timer-block{background:var(--ink);color:var(--cream);padding:6px 10px;text-align:center;min-width:44px}
+.timer-num{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:600;line-height:1;display:block}
+.timer-label{font-size:.5rem;letter-spacing:.12em;text-transform:uppercase;opacity:.6;display:block}
+.timer-sep{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:600;color:var(--ink)}
+
+/* ── SOCIAL PROOF STRIP ── */
+.proof-strip{background:var(--cream2);border-bottom:1px solid var(--border);display:flex;justify-content:center;overflow:hidden}
+.proof-item{flex:1;max-width:200px;padding:20px 16px;text-align:center;border-right:1px solid var(--border)}
+.proof-item:last-child{border-right:none}
+.proof-num{font-family:'Cormorant Garamond',serif;font-size:1.7rem;font-weight:500;color:var(--ink);line-height:1}
+.proof-label{font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink3);margin-top:3px}
+
+/* ── SECTION UTILS ── */
+.section{padding:96px 80px}
+.section-eyebrow{font-size:.65rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:14px;display:flex;align-items:center;gap:10px}
+.section-eyebrow::before{content:'';display:block;width:24px;height:1px;background:var(--gold)}
+.section-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2.2rem,4vw,3.8rem);font-weight:300;line-height:1.1;color:var(--ink);margin-bottom:16px}
+.section-title em{font-style:italic;color:var(--gold)}
+.section-sub{font-size:.88rem;color:var(--ink3);line-height:1.7;max-width:520px}
+
+/* ── WHY US (BENEFITS) ── */
+.benefits{background:var(--ink);padding:96px 80px}
+.benefits-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(245,240,232,.1);margin-top:64px;border:1px solid rgba(245,240,232,.1)}
+.benefit-card{padding:48px 40px;background:var(--ink)}
+.benefit-icon{width:44px;height:44px;border:1px solid var(--gold);display:flex;align-items:center;justify-content:center;margin-bottom:24px;color:var(--gold)}
+.benefit-title{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:500;color:var(--white);margin-bottom:12px;line-height:1.2}
+.benefit-text{font-size:.8rem;color:rgba(245,240,232,.45);line-height:1.7}
+
+/* ── BESTSELLERS ── */
+.products-section{background:var(--cream);padding:96px 80px}
+.products-header{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:48px;flex-wrap:wrap;gap:20px}
+.products-header-right{display:flex;gap:8px;flex-wrap:wrap}
+.tag-filter{padding:7px 18px;border:1px solid var(--border);border-radius:100px;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;font-weight:500;color:var(--ink2);transition:var(--ease);cursor:pointer;background:transparent}
+.tag-filter:hover,.tag-filter.on{background:var(--ink);color:var(--cream);border-color:var(--ink)}
+.best-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border:1px solid var(--border)}
+.best-card{background:var(--cream);position:relative;overflow:hidden;cursor:pointer;transition:background .2s}
+.best-card:hover{background:var(--cream2)}
+.best-img{position:relative;aspect-ratio:3/4;overflow:hidden;background:var(--cream2)}
+.best-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.25,.46,.45,.94)}
+.best-img .img2{position:absolute;inset:0;opacity:0;transition:opacity .4s}
+.best-card:hover .img2{opacity:1}
+.best-card:hover .img1{transform:scale(1.04)}
+.best-tag{position:absolute;top:10px;left:10px;background:var(--red);color:#fff;font-size:.56rem;letter-spacing:.12em;text-transform:uppercase;font-weight:700;padding:4px 9px}
+.best-quick{position:absolute;bottom:14px;left:50%;transform:translateX(-50%) translateY(10px);background:var(--ink);color:var(--cream);white-space:nowrap;padding:9px 20px;font-size:.65rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;opacity:0;transition:opacity .3s,transform .3s;pointer-events:none}
+.best-card:hover .best-quick{opacity:1;transform:translateX(-50%) translateY(0);pointer-events:auto}
+.best-info{padding:14px 16px 18px}
+.best-name{font-family:'Cormorant Garamond',serif;font-size:1rem;font-weight:500;line-height:1.3;color:var(--ink);margin-bottom:8px}
+.best-prices{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.best-price{font-size:.88rem;font-weight:600;color:var(--ink)}
+.best-compare{font-size:.8rem;color:var(--ink3);text-decoration:line-through}
+.best-off{font-size:.6rem;letter-spacing:.08em;background:var(--red);color:#fff;padding:2px 6px;font-weight:700}
+.show-all-wrap{text-align:center;margin-top:48px}
+.show-all-btn{display:inline-block;border:1px solid var(--ink);color:var(--ink);padding:14px 44px;font-size:.75rem;letter-spacing:.15em;text-transform:uppercase;font-weight:600;transition:background .2s,color .2s}
+.show-all-btn:hover{background:var(--ink);color:var(--cream)}
+
+/* ── HOW IT WORKS ── */
+.how{background:var(--cream2);padding:96px 80px;border-top:1px solid var(--border)}
+.how-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:40px;margin-top:64px;position:relative}
+.how-steps::before{content:'';position:absolute;top:22px;left:calc(12.5% + 16px);right:calc(12.5% + 16px);height:1px;background:var(--border)}
+.how-step{text-align:center;position:relative}
+.step-num{width:44px;height:44px;border:1px solid var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:500;color:var(--gold);margin:0 auto 20px;background:var(--cream2);position:relative;z-index:1}
+.step-title{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:500;color:var(--ink);margin-bottom:10px}
+.step-text{font-size:.78rem;color:var(--ink3);line-height:1.6}
+
+/* ── TESTIMONIALS ── */
+.testimonials{background:var(--ink);padding:96px 80px}
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(245,240,232,.08);margin-top:64px;border:1px solid rgba(245,240,232,.08)}
+.testi-card{padding:40px 36px;background:var(--ink)}
+.testi-stars{display:flex;gap:3px;margin-bottom:16px}
+.star{color:var(--gold);font-size:.9rem}
+.testi-text{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:300;font-style:italic;color:rgba(245,240,232,.85);line-height:1.6;margin-bottom:20px}
+.testi-author{font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(245,240,232,.35);font-weight:500}
+.testi-product{font-size:.7rem;color:var(--gold);margin-top:3px;font-weight:500}
+
+/* ── FAQ ── */
+.faq{background:var(--cream);padding:96px 80px;border-top:1px solid var(--border)}
+.faq-list{max-width:740px;margin:64px auto 0;display:flex;flex-direction:column;gap:1px}
+.faq-item{border-top:1px solid var(--border)}
+.faq-item:last-child{border-bottom:1px solid var(--border)}
+.faq-q{width:100%;padding:22px 0;display:flex;align-items:center;justify-content:space-between;gap:16px;text-align:left;cursor:pointer;font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:500;color:var(--ink);background:none;border:none}
+.faq-icon{flex-shrink:0;width:24px;height:24px;border:1px solid var(--border);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.9rem;color:var(--ink3);transition:transform .3s,background .2s,border-color .2s}
+.faq-item.open .faq-icon{transform:rotate(45deg);background:var(--ink);border-color:var(--ink);color:var(--cream)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease,padding .3s}
+.faq-item.open .faq-a{max-height:200px;padding-bottom:20px}
+.faq-a p{font-size:.84rem;color:var(--ink3);line-height:1.7}
+
+/* ── GUARANTEE ── */
+.guarantee{background:var(--cream2);padding:80px;border-top:1px solid var(--border);display:grid;grid-template-columns:1fr 1fr 1fr;gap:40px}
+.guarantee-item{display:flex;align-items:flex-start;gap:20px}
+.guarantee-icon{flex-shrink:0;width:48px;height:48px;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;color:var(--gold)}
+.guarantee-title{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:500;color:var(--ink);margin-bottom:6px}
+.guarantee-text{font-size:.78rem;color:var(--ink3);line-height:1.6}
+
+/* ── FINAL CTA ── */
+.final-cta{background:var(--ink);padding:120px 80px;text-align:center;position:relative;overflow:hidden}
+.final-cta::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 60%,rgba(200,169,110,.12) 0%,transparent 60%)}
+.final-cta-eyebrow{font-size:.65rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:20px;display:flex;align-items:center;justify-content:center;gap:10px}
+.final-cta-eyebrow::before,.final-cta-eyebrow::after{content:'';display:block;width:32px;height:1px;background:var(--gold)}
+.final-cta h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2.8rem,6vw,5.5rem);font-weight:300;color:var(--white);line-height:1.05;margin-bottom:20px}
+.final-cta h2 em{font-style:italic;color:var(--gold)}
+.final-cta p{font-size:.9rem;color:rgba(245,240,232,.45);max-width:480px;margin:0 auto 44px;line-height:1.7}
+.final-cta-btn{display:inline-block;background:var(--gold);color:var(--ink);padding:20px 60px;font-size:.82rem;letter-spacing:.18em;text-transform:uppercase;font-weight:700;transition:background .2s,transform .15s;position:relative;z-index:2}
+.final-cta-btn:hover{background:var(--gold2);transform:translateY(-2px)}
+.final-cta-note{margin-top:20px;font-size:.68rem;color:rgba(245,240,232,.25);letter-spacing:.08em;text-transform:uppercase}
+
+/* ── FOOTER ── */
+footer{background:var(--cream2);border-top:1px solid var(--border);padding:48px 80px 32px}
+.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px}
+.footer-logo{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:600;letter-spacing:.08em;margin-bottom:12px}
+.footer-logo span{color:var(--gold)}
+.footer-desc{font-size:.78rem;color:var(--ink3);line-height:1.7;max-width:240px}
+.footer-col h4{font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink3);font-weight:600;margin-bottom:16px}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+.footer-col li a{font-size:.78rem;color:var(--ink2);transition:color .2s}
+.footer-col li a:hover{color:var(--ink)}
+.footer-bottom{border-top:1px solid var(--border);padding-top:20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.footer-copy{font-size:.68rem;color:var(--ink3);letter-spacing:.06em}
+.pay-strip{display:flex;gap:8px}
+.pay-badge{background:var(--border);border-radius:3px;padding:4px 10px;font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink3);font-weight:600}
+
+/* ── MODAL ── */
+.modal-overlay{position:fixed;inset:0;background:rgba(12,10,8,.75);z-index:1000;display:flex;align-items:center;justify-content:center;padding:24px;opacity:0;pointer-events:none;transition:opacity .3s;backdrop-filter:blur(4px)}
+.modal-overlay.open{opacity:1;pointer-events:auto}
+.modal{background:var(--cream);width:100%;max-width:900px;max-height:90vh;overflow-y:auto;display:grid;grid-template-columns:1fr 1fr;transform:translateY(20px) scale(.98);transition:transform .35s var(--spring)}
+.modal-overlay.open .modal{transform:translateY(0) scale(1)}
+.modal-gallery{position:relative;background:var(--cream2)}
+.modal-gallery-main{aspect-ratio:3/4;overflow:hidden}
+.modal-gallery-main img{width:100%;height:100%;object-fit:cover}
+.modal-thumbs{display:flex;gap:6px;padding:10px;overflow-x:auto;background:var(--cream2)}
+.modal-thumb{width:60px;height:75px;flex-shrink:0;object-fit:cover;cursor:pointer;border:2px solid transparent;opacity:.6;transition:opacity .2s,border-color .2s}
+.modal-thumb.active{border-color:var(--ink);opacity:1}
+.modal-info{padding:40px 36px;display:flex;flex-direction:column}
+.modal-brand{font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:10px}
+.modal-title{font-family:'Cormorant Garamond',serif;font-size:1.7rem;font-weight:500;line-height:1.2;color:var(--ink);margin-bottom:16px}
+.modal-pricing{display:flex;align-items:baseline;gap:12px;margin-bottom:28px;flex-wrap:wrap}
+.modal-price{font-size:1.35rem;font-weight:600;color:var(--ink)}
+.modal-compare{font-size:.95rem;color:var(--ink3);text-decoration:line-through}
+.modal-saving{font-size:.68rem;letter-spacing:.1em;background:var(--red);color:#fff;padding:3px 9px;font-weight:700}
+.modal-size-label{font-size:.65rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink3);font-weight:500;margin-bottom:10px}
+.size-grid{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px}
+.size-opt{border:1px solid var(--border);width:48px;height:42px;display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:500;cursor:pointer;transition:var(--ease);color:var(--ink2)}
+.size-opt:hover,.size-opt.selected{background:var(--ink);color:var(--cream);border-color:var(--ink)}
+.modal-add-btn{background:var(--ink);color:var(--cream);padding:15px 28px;font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;font-weight:700;width:100%;transition:background .2s;cursor:pointer;margin-bottom:14px}
+.modal-add-btn:hover{background:var(--ink2)}
+.modal-add-btn:disabled{opacity:.4;cursor:not-allowed}
+.modal-features{display:flex;flex-direction:column;gap:9px;margin-top:16px;padding-top:16px;border-top:1px solid var(--border)}
+.modal-feature{display:flex;gap:10px;align-items:center;font-size:.73rem;color:var(--ink3)}
+.modal-close{position:absolute;top:12px;right:12px;width:34px;height:34px;background:var(--ink);color:var(--cream);display:flex;align-items:center;justify-content:center;font-size:.9rem;z-index:10;border-radius:50%;cursor:pointer}
+
+/* ── CART ── */
+.cart-overlay{position:fixed;inset:0;background:rgba(12,10,8,.5);z-index:1100;opacity:0;pointer-events:none;transition:opacity .3s}
+.cart-overlay.open{opacity:1;pointer-events:auto}
+.cart-drawer{position:fixed;top:0;right:0;bottom:0;width:min(400px,100vw);background:var(--cream);transform:translateX(100%);transition:transform .4s var(--spring);z-index:1101;display:flex;flex-direction:column}
+.cart-overlay.open .cart-drawer{transform:translateX(0)}
+.cart-head{padding:22px 24px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between}
+.cart-head h2{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:500}
+.cart-close{font-size:1.1rem;color:var(--ink3);cursor:pointer;padding:4px;transition:color .2s}
+.cart-close:hover{color:var(--ink)}
+.cart-body{flex:1;overflow-y:auto;padding:16px 24px}
+.cart-empty{text-align:center;padding:56px 0}
+.cart-empty p{font-family:'Cormorant Garamond',serif;font-size:1.05rem;color:var(--ink3);margin-bottom:20px}
+.cart-item{display:grid;grid-template-columns:72px 1fr auto;gap:12px;padding:14px 0;border-bottom:1px solid var(--border)}
+.cart-item img{width:72px;height:90px;object-fit:cover;background:var(--cream2)}
+.cart-item-name{font-family:'Cormorant Garamond',serif;font-size:.9rem;font-weight:500;line-height:1.3;margin-bottom:3px}
+.cart-item-size{font-size:.68rem;color:var(--ink3);text-transform:uppercase;letter-spacing:.05em}
+.cart-item-price{font-size:.85rem;font-weight:600;margin-top:5px}
+.cart-remove{font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);text-decoration:underline;cursor:pointer;margin-top:5px;background:none;border:none;padding:0}
+.cart-remove:hover{color:var(--red)}
+.cart-foot{padding:18px 24px 28px;border-top:1px solid var(--border)}
+.cart-subtotal{display:flex;justify-content:space-between;margin-bottom:14px;align-items:baseline}
+.cart-subtotal span{font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3)}
+.cart-subtotal strong{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:500}
+.cart-checkout{background:var(--ink);color:var(--cream);padding:15px;font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;font-weight:700;width:100%;transition:background .2s;cursor:pointer}
+.cart-checkout:hover{background:var(--ink2)}
+.ship-bar-txt{font-size:.68rem;color:var(--ink3);text-align:center;margin-bottom:12px}
+.ship-progress{height:2px;background:var(--border);border-radius:2px;overflow:hidden;margin-top:5px}
+.ship-fill{height:100%;background:var(--gold);transition:width .4s}
+
+/* ── TOAST ── */
+.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(80px);background:var(--ink);color:var(--cream);padding:13px 26px;font-size:.76rem;letter-spacing:.06em;z-index:2000;transition:transform .4s var(--spring),opacity .4s;opacity:0;white-space:nowrap;pointer-events:none}
+.toast.show{transform:translateX(-50%) translateY(0);opacity:1}
+
+/* ── SCROLL TOP ── */
+.scroll-top{position:fixed;bottom:24px;right:24px;width:42px;height:42px;background:var(--ink);color:var(--cream);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.9rem;z-index:500;opacity:0;pointer-events:none;transition:opacity .3s,transform .3s;transform:translateY(8px);cursor:pointer}
+.scroll-top.visible{opacity:1;pointer-events:auto;transform:translateY(0)}
+.scroll-top:hover{background:var(--ink2)}
+
+/* ── RESPONSIVE ── */
+@media(max-width:1100px){
+  .hero{grid-template-columns:1fr}
+  .hero-img-col{display:none}
+  .hero{min-height:auto;padding:80px 40px}
+  .hero-text{padding:0}
+  .benefits-grid{grid-template-columns:1fr}
+  .best-grid{grid-template-columns:repeat(3,1fr)}
+  .how-steps{grid-template-columns:repeat(2,1fr)}
+  .how-steps::before{display:none}
+  .testi-grid{grid-template-columns:1fr}
+  .guarantee{grid-template-columns:1fr}
+  .final-cta{padding:80px 40px}
+  .section{padding:72px 40px}
+  .benefits{padding:72px 40px}
+  .products-section{padding:72px 40px}
+  .how{padding:72px 40px}
+  .testimonials{padding:72px 40px}
+  .faq{padding:72px 40px}
+  .guarantee{padding:56px 40px}
+  footer{padding:40px 40px 24px}
+  .footer-top{grid-template-columns:1fr 1fr}
+}
+@media(max-width:768px){
+  nav{padding:0 20px}
+  .best-grid{grid-template-columns:repeat(2,1fr)}
+  .products-header{flex-direction:column;align-items:flex-start}
+  .how-steps{grid-template-columns:1fr 1fr;gap:24px}
+  .footer-top{grid-template-columns:1fr}
+  .footer-payments{display:none}
+  .modal{grid-template-columns:1fr}
+  .modal-gallery-main{aspect-ratio:1/1}
+  .modal-info{padding:24px 20px}
+}
+@media(max-width:480px){
+  .hero-title{font-size:2.8rem}
+  .best-grid{grid-template-columns:repeat(2,1fr)}
+  .section-title{font-size:2.2rem}
+  .testi-card{padding:28px 24px}
+  .guarantee{padding:40px 20px}
+  footer{padding:32px 20px 20px}
+  .section{padding:56px 20px}
+  .benefits{padding:56px 20px}
+  .products-section{padding:56px 20px}
+  .how{padding:56px 20px}
+  .testimonials{padding:56px 20px}
+  .faq{padding:56px 20px}
+  .final-cta{padding:60px 20px}
+  nav{height:56px}
+}
+</style>
+</head>
+<body>
+
+<!-- ANNOUNCEMENT -->
+<div class="ann-bar">
+  <span>Livraison offerte dès 150€ &nbsp;·&nbsp; Stock limité — Édition outlet 2024 &nbsp;·&nbsp; Jusqu'à -55% sur les prix boutique &nbsp;·&nbsp; 100% coton biologique &nbsp;·&nbsp; Expédition sous 24h &nbsp;·&nbsp; Retours gratuits 30 jours &nbsp;·&nbsp; Livraison offerte dès 150€ &nbsp;·&nbsp; Stock limité — Édition outlet 2024 &nbsp;·&nbsp; Jusqu'à -55% sur les prix boutique &nbsp;·&nbsp; 100% coton biologique &nbsp;·&nbsp; Expédition sous 24h &nbsp;·&nbsp; Retours gratuits 30 jours &nbsp;·&nbsp;</span>
+</div>
+
+<!-- NAV -->
+<nav id="mainNav">
+  <a href="index.html" class="nav-logo">Casa<span>Outlet</span></a>
+  <a href="#bestsellers" class="nav-cta-small">Voir la collection →</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-text">
+    <div class="hero-eyebrow">Casablanca Paris · Édition Outlet Exclusive</div>
+    <h1 class="hero-title">
+      <strong>Des pièces</strong><br>
+      d'exception, à<br>
+      prix <em>outlet.</em>
+    </h1>
+    <p class="hero-sub">T-shirts Casablanca Paris — imprimés iconiques, coton biologique certifié. Des pièces portées par les plus grands noms du streetwear, disponibles jusqu'à -55% sur leur prix de boutique.</p>
+    <div class="hero-actions">
+      <a href="#bestsellers" class="hero-cta-main">Découvrir les pièces</a>
+      <div class="hero-trust">
+        <div class="hero-trust-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+          +2 400 clients satisfaits
+        </div>
+        <div class="hero-trust-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+          Expédition sous 24h
+        </div>
+        <div class="hero-trust-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+          Retours gratuits 30 jours
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-img-col">
+    <img src="https://cdn.shopify.com/s/files/1/0757/4156/1098/files/blanc13.1.png?v=1717511802" alt="T-shirt Casablanca Paris outlet">
+    <div class="hero-img-overlay"></div>
+    <div class="hero-badge-float">
+      <div class="hero-badge-pct">-55%</div>
+      <div class="hero-badge-label">Sur les prix boutique</div>
+    </div>
+  </div>
+</section>
+
+<!-- URGENCY BAR -->
+<div class="urgency-bar">
+  <div class="urgency-text">⚡ Stock limité — Offre valable encore :</div>
+  <div class="timer">
+    <div class="timer-block"><span class="timer-num" id="timerH">23</span><span class="timer-label">Heures</span></div>
+    <div class="timer-sep">:</div>
+    <div class="timer-block"><span class="timer-num" id="timerM">47</span><span class="timer-label">Min</span></div>
+    <div class="timer-sep">:</div>
+    <div class="timer-block"><span class="timer-num" id="timerS">12</span><span class="timer-label">Sec</span></div>
+  </div>
+  <div class="urgency-text">43 articles disponibles · Des commandes passées aujourd'hui</div>
+</div>
+
+<!-- PROOF STRIP -->
+<div class="proof-strip">
+  <div class="proof-item"><div class="proof-num">2 400+</div><div class="proof-label">Clients satisfaits</div></div>
+  <div class="proof-item"><div class="proof-num">4.9★</div><div class="proof-label">Note moyenne</div></div>
+  <div class="proof-item"><div class="proof-num">-55%</div><div class="proof-label">Remise maximale</div></div>
+  <div class="proof-item"><div class="proof-num">24h</div><div class="proof-label">Expédition</div></div>
+  <div class="proof-item"><div class="proof-num">100%</div><div class="proof-label">Coton bio</div></div>
+</div>
+
+<!-- BENEFITS -->
+<section class="benefits">
+  <div style="text-align:center;max-width:580px;margin:0 auto">
+    <div class="section-eyebrow" style="justify-content:center">Pourquoi CasaOutlet</div>
+    <h2 class="section-title" style="color:var(--white)">Ce que vous ne<br>trouverez <em>nulle part ailleurs</em></h2>
+  </div>
+  <div class="benefits-grid">
+    <div class="benefit-card">
+      <div class="benefit-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2z"/></svg>
+      </div>
+      <div class="benefit-title">Authenticité garantie</div>
+      <p class="benefit-text">Chaque pièce est sourcée directement auprès de fournisseurs certifiés. 100% authentique, certificat disponible sur demande.</p>
+    </div>
+    <div class="benefit-card">
+      <div class="benefit-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      </div>
+      <div class="benefit-title">Expédition express 24h</div>
+      <p class="benefit-text">Commandez avant 14h, votre colis part le jour même. Livraison suivie, emballage premium inclus. Livraison offerte dès 150€.</p>
+    </div>
+    <div class="benefit-card">
+      <div class="benefit-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+      </div>
+      <div class="benefit-title">100% coton biologique</div>
+      <p class="benefit-text">Matière certifiée GOTS. Imprimés haute résolution qui résistent aux lavages. La qualité Casablanca Paris, sans compromis.</p>
+    </div>
+    <div class="benefit-card">
+      <div class="benefit-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>
+      </div>
+      <div class="benefit-title">Retours gratuits 30 jours</div>
+      <p class="benefit-text">Pas satisfait ? On vous rembourse intégralement. Aucune question posée, étiquette de retour prépayée incluse dans votre colis.</p>
+    </div>
+    <div class="benefit-card">
+      <div class="benefit-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+      </div>
+      <div class="benefit-title">Paiement 100% sécurisé</div>
+      <p class="benefit-text">Visa, Mastercard, PayPal, Apple Pay. Paiement en 3×sans frais disponible. Chiffrement SSL — vos données sont protégées.</p>
+    </div>
+    <div class="benefit-card">
+      <div class="benefit-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+      </div>
+      <div class="benefit-title">Support réactif 7j/7</div>
+      <p class="benefit-text">Notre équipe répond en moins de 2h. Chat en direct, email, WhatsApp. On est là pour vous, avant et après votre commande.</p>
+    </div>
+  </div>
+</section>
+
+<!-- BESTSELLERS -->
+<section class="products-section" id="bestsellers">
+  <div class="products-header">
+    <div>
+      <div class="section-eyebrow">Sélection outlet</div>
+      <h2 class="section-title">Les meilleures<br><em>pièces du moment</em></h2>
+    </div>
+    <div class="products-header-right">
+      <button class="tag-filter on" onclick="filterBest('all',this)">Tous</button>
+      <button class="tag-filter" onclick="filterBest('Tennis',this)">Tennis Club</button>
+      <button class="tag-filter" onclick="filterBest('Blanc',this)">Blanc</button>
+      <button class="tag-filter" onclick="filterBest('Noir',this)">Noir</button>
+      <button class="tag-filter" onclick="filterBest('Rose',this)">Rose</button>
+    </div>
+  </div>
+  <div class="best-grid" id="bestGrid"></div>
+  <div class="show-all-wrap">
+    <a href="index.html#collection" class="show-all-btn">Voir les 43 modèles →</a>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how">
+  <div style="text-align:center;max-width:540px;margin:0 auto">
+    <div class="section-eyebrow" style="justify-content:center">Simple & rapide</div>
+    <h2 class="section-title" style="text-align:center">Votre commande en<br><em>4 étapes</em></h2>
+  </div>
+  <div class="how-steps">
+    <div class="how-step">
+      <div class="step-num">1</div>
+      <div class="step-title">Choisissez votre pièce</div>
+      <p class="step-text">Parcourez nos 43 modèles, filtrez par couleur ou collection, et trouvez le t-shirt qui vous correspond.</p>
+    </div>
+    <div class="how-step">
+      <div class="step-num">2</div>
+      <div class="step-title">Sélectionnez votre taille</div>
+      <p class="step-text">XS à XXL disponibles. Consultez notre guide des tailles si besoin — notre coupe est fidèle aux standards européens.</p>
+    </div>
+    <div class="how-step">
+      <div class="step-num">3</div>
+      <div class="step-title">Payez en toute sécurité</div>
+      <p class="step-text">CB, PayPal, Apple Pay ou 3× sans frais. Transaction chiffrée SSL. Confirmation immédiate par email.</p>
+    </div>
+    <div class="how-step">
+      <div class="step-num">4</div>
+      <div class="step-title">Recevez sous 48h</div>
+      <p class="step-text">Emballage premium, livraison suivie. Vous recevez un SMS à chaque étape. Satisfait ou remboursé 30 jours.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials">
+  <div style="text-align:center;max-width:540px;margin:0 auto">
+    <div class="section-eyebrow" style="justify-content:center;color:var(--gold)">Ce qu'ils en disent</div>
+    <h2 class="section-title" style="color:var(--white);text-align:center">Ils ont craqué,<br>ils <em>recommandent</em></h2>
+  </div>
+  <div class="testi-grid">
+    <div class="testi-card">
+      <div class="testi-stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+      <p class="testi-text">« Qualité incroyable pour le prix. L'imprimé est nickel, le coton est vraiment premium. Je l'ai commandé le lundi, reçu le mercredi. Je vais en recommander. »</p>
+      <div class="testi-author">Karim B. — Paris 11e</div>
+      <div class="testi-product">T-shirt Blanc Tennis : Afro Cubisme</div>
+    </div>
+    <div class="testi-card">
+      <div class="testi-stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+      <p class="testi-text">« J'avais un doute au début avec les prix outlet mais tout est authentique, l'emballage est soigné. La pièce vaut facilement 3× le prix payé. Incroyable rapport qualité/prix. »</p>
+      <div class="testi-author">Léa M. — Lyon</div>
+      <div class="testi-product">T-shirt Rose : L'arc de Jour</div>
+    </div>
+    <div class="testi-card">
+      <div class="testi-stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+      <p class="testi-text">« 3 commandes en 2 mois, toujours aussi satisfait. Les t-shirts se portent aussi bien au quotidien qu'en sortie. Et le service client répond en 30 minutes top chrono. »</p>
+      <div class="testi-author">Samir T. — Bordeaux</div>
+      <div class="testi-product">T-shirt Noir : Triomphe d'Orange</div>
+    </div>
+    <div class="testi-card">
+      <div class="testi-stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+      <p class="testi-text">« Offert à mon copain pour son anniversaire. Il était tellement surpris quand il a vu la marque sur l'étiquette ! Livraison rapide, très bien emballé, je recommande. »</p>
+      <div class="testi-author">Clara D. — Marseille</div>
+      <div class="testi-product">T-shirt Blanc : Studio de Musique</div>
+    </div>
+    <div class="testi-card">
+      <div class="testi-stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+      <p class="testi-text">« Les imprimés sont d'une netteté parfaite. Après 10 lavages, aucune décoloration. C'est ça la vraie qualité. CasaOutlet a trouvé un client fidèle. »</p>
+      <div class="testi-author">Mehdi K. — Toulouse</div>
+      <div class="testi-product">T-shirt Noir Tennis : Afro Cubisme</div>
+    </div>
+    <div class="testi-card">
+      <div class="testi-stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+      <p class="testi-text">« Je collectionne les Casablanca Paris depuis 3 ans. Les prix ici sont juste impossibles à refuser. Pièces reçues en parfait état, exactement comme décrit. »</p>
+      <div class="testi-author">Inès F. — Nantes</div>
+      <div class="testi-product">T-shirt Blanc : Vibrations Mentales</div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+  <div style="text-align:center;max-width:540px;margin:0 auto">
+    <div class="section-eyebrow" style="justify-content:center">Vos questions</div>
+    <h2 class="section-title" style="text-align:center">Tout ce que vous<br>voulez <em>savoir</em></h2>
+  </div>
+  <div class="faq-list" id="faqList">
+    <div class="faq-item">
+      <button class="faq-q">Les t-shirts sont-ils 100% authentiques ?<span class="faq-icon">+</span></button>
+      <div class="faq-a"><p>Oui, absolument. Toutes nos pièces sont sourcées auprès de fournisseurs officiellement certifiés. Chaque t-shirt est accompagné de son étiquette d'origine. En cas de doute, notre équipe peut vous fournir les justificatifs d'authenticité.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">Pourquoi les prix sont-ils si bas ?<span class="faq-icon">+</span></button>
+      <div class="faq-a"><p>CasaOutlet est une boutique outlet spécialisée. Nous acquérons les fins de séries et surplus de collections directement à prix réduit, et nous vous répercutons ces économies. La qualité reste identique aux prix boutique.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">Quels sont les délais de livraison ?<span class="faq-icon">+</span></button>
+      <div class="faq-a"><p>Nous expédions sous 24h ouvrées après confirmation de paiement. La livraison prend ensuite 2 à 4 jours ouvrés en France métropolitaine. Vous recevez un numéro de suivi par email dès l'expédition.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">Comment choisir ma taille ?<span class="faq-icon">+</span></button>
+      <div class="faq-a"><p>Les t-shirts Casablanca Paris sont coupés oversized par nature. Si vous hésitez, prenez votre taille habituelle. Notre coupe est fidèle aux standards européens (S=36-38, M=40-42, L=44-46). Un guide des tailles complet est disponible en pied de page.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">Puis-je retourner ma commande ?<span class="faq-icon">+</span></button>
+      <div class="faq-a"><p>Oui, les retours sont gratuits pendant 30 jours après réception. Les articles doivent être dans leur état d'origine (non portés, non lavés, étiquettes intactes). Contactez notre support et on vous envoie l'étiquette de retour prépayée immédiatement.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">Quels modes de paiement acceptez-vous ?<span class="faq-icon">+</span></button>
+      <div class="faq-a"><p>Nous acceptons Visa, Mastercard, American Express, PayPal, Apple Pay et Google Pay. Le paiement en 3× sans frais est disponible dès 100€ d'achat via notre partenaire. Toutes les transactions sont sécurisées par SSL.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- GUARANTEE -->
+<div class="guarantee">
+  <div class="guarantee-item">
+    <div class="guarantee-icon">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+    </div>
+    <div>
+      <div class="guarantee-title">Garantie authenticité</div>
+      <p class="guarantee-text">Chaque pièce sourcée et vérifiée. Satisfait ou remboursé intégral.</p>
+    </div>
+  </div>
+  <div class="guarantee-item">
+    <div class="guarantee-icon">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+    </div>
+    <div>
+      <div class="guarantee-title">Livraison suivie offerte</div>
+      <p class="guarantee-text">Dès 150€ d'achat, livraison offerte avec suivi en temps réel.</p>
+    </div>
+  </div>
+  <div class="guarantee-item">
+    <div class="guarantee-icon">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>
+    </div>
+    <div>
+      <div class="guarantee-title">Retours gratuits 30 jours</div>
+      <p class="guarantee-text">Étiquette prépayée incluse. Remboursement en 48h.</p>
+    </div>
+  </div>
+</div>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <div class="final-cta-eyebrow">Dernières pièces disponibles</div>
+  <h2>Profitez de <em>-55%</em><br>avant rupture de stock.</h2>
+  <p>Les outlets Casablanca Paris sont des éditions rares. Une fois écoulées, elles ne reviennent pas. Ne passez pas à côté.</p>
+  <a href="#bestsellers" class="final-cta-btn">Accéder à la collection</a>
+  <div class="final-cta-note">Paiement sécurisé · Expédition 24h · Retours 30 jours</div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div>
+      <div class="footer-logo">Casa<span>Outlet</span></div>
+      <p class="footer-desc">Votre destination outlet pour les t-shirts Casablanca Paris. Imprimés iconiques, coton biologique, prix outlet.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Navigation</h4>
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="index.html#collection">Collection</a></li>
+        <li><a href="index.html#collection">Tennis Club</a></li>
+        <li><a href="index.html#collection">Modèles Noir</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Informations</h4>
+      <ul>
+        <li><a href="#">À propos</a></li>
+        <li><a href="#">Livraison</a></li>
+        <li><a href="#">Retours</a></li>
+        <li><a href="#">Guide des tailles</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Légal</h4>
+      <ul>
+        <li><a href="#">Mentions légales</a></li>
+        <li><a href="#">CGV</a></li>
+        <li><a href="#">Confidentialité</a></li>
+        <li><a href="#">Cookies</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p class="footer-copy">© 2024 CasaOutlet. Tous droits réservés.</p>
+    <div class="pay-strip">
+      <span class="pay-badge">Visa</span>
+      <span class="pay-badge">Mastercard</span>
+      <span class="pay-badge">PayPal</span>
+      <span class="pay-badge">Apple Pay</span>
+    </div>
+  </div>
+</footer>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modalOverlay" onclick="closeModal(event)">
+  <div class="modal" id="modal">
+    <div class="modal-gallery">
+      <button class="modal-close" onclick="closeModalBtn()">✕</button>
+      <div class="modal-gallery-main"><img id="modalMainImg" src="" alt=""></div>
+      <div class="modal-thumbs" id="modalThumbs"></div>
+    </div>
+    <div class="modal-info">
+      <div class="modal-brand">Casablanca Paris · Outlet</div>
+      <h2 class="modal-title" id="modalTitle"></h2>
+      <div class="modal-pricing">
+        <span class="modal-price" id="modalPrice"></span>
+        <span class="modal-compare" id="modalCompare"></span>
+        <span class="modal-saving" id="modalSaving"></span>
+      </div>
+      <div class="modal-size-label">Choisir une taille</div>
+      <div class="size-grid" id="modalSizeGrid"></div>
+      <button class="modal-add-btn" id="modalAddBtn" onclick="addFromModal()" disabled>Choisir une taille d'abord</button>
+      <div class="modal-features">
+        <div class="modal-feature">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          Expédition sous 24h ouvrées
+        </div>
+        <div class="modal-feature">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          100% coton biologique certifié
+        </div>
+        <div class="modal-feature">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>
+          Retours gratuits sous 30 jours
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CART DRAWER -->
+<div class="cart-overlay" id="cartOverlay" onclick="closeCartOverlay(event)">
+  <div class="cart-drawer">
+    <div class="cart-head">
+      <h2>Votre panier</h2>
+      <button class="cart-close" onclick="toggleCart()">✕</button>
+    </div>
+    <div class="cart-body" id="cartBody"></div>
+    <div class="cart-foot" id="cartFoot" style="display:none">
+      <div class="ship-bar-txt" id="freeShipBar"></div>
+      <div class="cart-subtotal">
+        <span>Sous-total</span>
+        <strong id="cartTotal">0,00 €</strong>
+      </div>
+      <button class="cart-checkout" onclick="showToast('Redirection vers le paiement...')">Passer la commande →</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+<button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<script>
+const PRODUCTS=[{id:0,title:"T-shirt Casablanca Blanc Tennis : Aigle Ludique",price:"109.90",compare:"230.00",images:["https://cdn.shopify.com/s/files/1/0757/4156/1098/files/tennis5.1.png?v=1717511743","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/tennis5.2.png?v=1717511743","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/tennis5.3.png?v=1717511743"]},{id:1,title:"T-shirt Casablanca Vert Tennis : Afro Cubisme (Orangé)",price:"109.90",compare:"230.00",images:["https://cdn.shopify.com/s/files/1/0757/4156/1098/files/tennis4.1.png?v=1717511755","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/tennis4.2.png?v=1717511755","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/tennis4.3.png?v=1717511755","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/tennis4.4.png?v=1717511755"]},{id:2,title:"T-Shirt Casablanca Rose : L'arc de Jour",price:"89.90",compare:"250.00",images:["https://cdn.shopify.com/s/files/1/0757/4156/1098/files/rose0.png?v=1717511970","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/Rose2.2_adc0ea12-8c35-4487-a1b4-2761ec86f3bd.png?v=1717511970","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/Rose2.3_1c9a915f-102c-4ab2-bf06-27f9fbf89944.png?v=1717511970","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/Rose2.4_6d391918-2ad2-44b3-9791-aead32e96fe6.png?v=1717511970"]},{id:3,title:"T-shirt Casablanca Blanc : Souvenir",price:"119.90",compare:"250.00",images:["https://cdn.shopify.com/s/files/1/0757/4156/1098/files/blanc12.1.png?v=1717511812","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/blanc12.2.png?v=1717511812","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/blanc12.3.png?v=1717511812"]},{id:4,title:"T-Shirt Casablanca Noir : L'arc Coloré",price:"89.90",compare:"250.00",images:["https://cdn.shopify.com/s/files/1/0757/4156/1098/files/Noir1.1.png?v=1717512047","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/Noir1.2.png?v=1717512047"]},{id:5,title:"T-Shirt Casablanca Noir : Bleu Dégradé",price:"109.90",compare:"250.00",images:["https://cdn.shopify.com/s/files/1/0757/4156/1098/files/noir2.1.png?v=1717512029","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/noir2.2.png?v=1717512029","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/noir2.3.png?v=1717512029","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/noir2.4.png?v=1717512029"]},{id:6,title:"T-Shirt Casablanca Rose : L'arc Coloré",price:"89.90",compare:"250.00",images:["https://cdn.shopify.com/s/files/1/0757/4156/1098/files/Roseclassique1.1.png?v=1717512058","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/roseclassique1.2.png?v=1717512058","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/Roseclassique1.3.png?v=1717512058","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/Roseclassique1.4.png?v=1717512058"]},{id:7,title:"T-Shirt Casablanca Noir : Triomphe d'Orange",price:"119.90",compare:"250.00",images:["https://cdn.shopify.com/s/files/1/0757/4156/1098/files/noir8.1.png?v=1717511879","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/noir8.2.png?v=1717511879","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/noir8.3.png?v=1717511879","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/noir8.4.png?v=1717511879"]},{id:8,title:"T-shirt Casablanca Blanc Tennis : Terrain Oriental",price:"109.90",compare:"230.00",images:["https://cdn.shopify.com/s/files/1/0757/4156/1098/files/tennis11.1_4a448ed4-5b80-4bd6-bb75-a6ae21eef024.png?v=1717511680","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/tennis11.2_8c8c291b-a83c-4cf0-8f9e-20a13bf6540c.png?v=1717511680","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/tennis11.3_fb97c473-65ce-4327-b0ba-80a48687d006.png?v=1717511680"]},{id:9,title:"T-shirt Casablanca Noir Tennis : Afro Cubisme (Gris)",price:"109.90",compare:"230.00",images:["https://cdn.shopify.com/s/files/1/0757/4156/1098/files/tennis8.1.png?v=1717511713","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/tennis8.2.png?v=1717511713","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/tennis8.3.png?v=1717511713","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/tennis8.4.png?v=1717511713"]},{id:10,title:"T-shirt Casablanca Noir Tennis : Terrain du Temple",price:"109.90",compare:"230.00",images:["https://cdn.shopify.com/s/files/1/0757/4156/1098/files/tennis13.1.png?v=1717511672","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/tennis13.2.png?v=1717511672","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/tennis13.3.png?v=1717511672","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/tennis13.4.png?v=1717511672"]},{id:11,title:"T-shirt Casablanca Noir Tennis : Afro Cubisme (Orangé)",price:"109.90",compare:"230.00",images:["https://cdn.shopify.com/s/files/1/0757/4156/1098/files/tennis3.1.png?v=1717511767","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/tennis3.2.png?v=1717511767","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/tennis3.3.png?v=1717511767","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/tennis3.4.png?v=1717511767"]},{id:38,title:"T-shirt Casablanca Blanc Tennis : Maison de Rêve",price:"109.90",compare:"230.00",images:["https://cdn.shopify.com/s/files/1/0757/4156/1098/files/tennis1.1.png?v=1717511790","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/tennis1.2.png?v=1717511790","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/tennis1.3.png?v=1717511790"]},{id:39,title:"T-shirt Casablanca Blanc : Vibrations Mentales",price:"119.90",compare:"250.00",images:["https://cdn.shopify.com/s/files/1/0757/4156/1098/files/blanc13.1.png?v=1717511802","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/blanc13.2.png?v=1717511802","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/blanc13.3.png?v=1717511802","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/blanc13.4.png?v=1717511802"]},{id:16,title:"T-Shirt Casablanca Blanc : L'arche Rosé",price:"99.90",compare:"250.00",images:["https://cdn.shopify.com/s/files/1/0757/4156/1098/files/blanc2.1.png?v=1717512004","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/blanc2.2.png?v=1717512004","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/BLANC2.3.png?v=1717512004","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/BLANC2.4.png?v=1717512004"]},{id:22,title:"T-shirt Casablanca Rose Tennis : La Joueuse",price:"109.90",compare:"230.00",images:["https://cdn.shopify.com/s/files/1/0757/4156/1098/files/tennis14.1.png?v=1717511662","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/tennis14.2.png?v=1717511662","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/tennis14.3.png?v=1717511662"]}];
+
+const SIZES=['XS','S','M','L','XL','XXL'];
+let cart=JSON.parse(localStorage.getItem('co_cart')||'[]');
+let currentModal=null,modalSelectedSize=null;
+
+function fmt(n){return parseFloat(n).toLocaleString('fr-FR',{minimumFractionDigits:2,maximumFractionDigits:2})+' €'}
+function pct(p,c){return Math.round((1-parseFloat(p)/parseFloat(c))*100)}
+function saveCart(){localStorage.setItem('co_cart',JSON.stringify(cart))}
+function showToast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2600)}
+
+/* ── GRID ── */
+function renderBest(){
+  const grid=document.getElementById('bestGrid');
+  grid.innerHTML='';
+  PRODUCTS.forEach(p=>{
+    const off=pct(p.price,p.compare);
+    const has2=p.images.length>1;
+    const short=p.title.replace(/^T-[Ss]hirt Casablanca /,'');
+    const card=document.createElement('div');
+    card.className='best-card';
+    card.dataset.id=p.id;
+    card.dataset.title=p.title.toLowerCase();
+    card.innerHTML=`<div class="best-img">
+      <img class="img1" src="${p.images[0]}" alt="${p.title}" loading="lazy">
+      ${has2?`<img class="img2" src="${p.images[1]}" alt="${p.title}" loading="lazy">`:''}
+      <span class="best-tag">-${off}%</span>
+      <button class="best-quick" onclick="openModal(event,${p.id})">Choisir la taille</button>
+    </div>
+    <div class="best-info">
+      <div class="best-name">${short}</div>
+      <div class="best-prices">
+        <span class="best-price">${fmt(p.price)}</span>
+        <span class="best-compare">${fmt(p.compare)}</span>
+        <span class="best-off">-${off}%</span>
+      </div>
+    </div>`;
+    card.addEventListener('click',e=>{if(!e.target.closest('.best-quick'))openModal(e,p.id)});
+    grid.appendChild(card);
+  });
+}
+
+function filterBest(key,btn){
+  document.querySelectorAll('.best-card').forEach(c=>{
+    const show=key==='all'||c.dataset.title.includes(key.toLowerCase());
+    c.style.display=show?'':'none';
+  });
+  document.querySelectorAll('.tag-filter').forEach(b=>b.classList.remove('on'));
+  if(btn)btn.classList.add('on');
+}
+
+/* ── MODAL ── */
+function openModal(e,id){
+  if(e)e.stopPropagation();
+  const p=PRODUCTS.find(x=>x.id===id);if(!p)return;
+  currentModal=p;modalSelectedSize=null;
+  const short=p.title.replace(/^T-[Ss]hirt Casablanca /,'');
+  document.getElementById('modalTitle').textContent=short;
+  document.getElementById('modalPrice').textContent=fmt(p.price);
+  document.getElementById('modalCompare').textContent=fmt(p.compare);
+  document.getElementById('modalSaving').textContent=`-${pct(p.price,p.compare)}%`;
+  const mainImg=document.getElementById('modalMainImg');
+  mainImg.src=p.images[0];mainImg.alt=p.title;
+  const thumbs=document.getElementById('modalThumbs');thumbs.innerHTML='';
+  p.images.forEach((img,i)=>{
+    const t=document.createElement('img');
+    t.src=img;t.alt=p.title;t.className='modal-thumb'+(i===0?' active':'');
+    t.onclick=()=>{mainImg.src=img;thumbs.querySelectorAll('.modal-thumb').forEach(x=>x.classList.remove('active'));t.classList.add('active')};
+    thumbs.appendChild(t);
+  });
+  const sg=document.getElementById('modalSizeGrid');sg.innerHTML='';
+  SIZES.forEach(s=>{
+    const b=document.createElement('div');b.className='size-opt';b.textContent=s;
+    b.onclick=()=>{sg.querySelectorAll('.size-opt').forEach(x=>x.classList.remove('selected'));b.classList.add('selected');modalSelectedSize=s;
+      const ab=document.getElementById('modalAddBtn');ab.disabled=false;ab.textContent='Ajouter au panier'};
+    sg.appendChild(b);
+  });
+  const ab=document.getElementById('modalAddBtn');ab.disabled=true;ab.textContent='Choisir une taille d\'abord';
+  document.getElementById('modalOverlay').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeModal(e){if(e.target===e.currentTarget)closeModalBtn()}
+function closeModalBtn(){document.getElementById('modalOverlay').classList.remove('open');document.body.style.overflow=''}
+function addFromModal(){
+  if(!modalSelectedSize||!currentModal)return;
+  addToCart(currentModal,modalSelectedSize);
+  closeModalBtn();
+}
+
+/* ── CART ── */
+function addToCart(product,size){
+  const key=`${product.id}-${size}`;
+  const ex=cart.find(x=>x.key===key);
+  if(ex){ex.qty++}else{cart.push({key,id:product.id,title:product.title,price:product.price,size,qty:1,image:product.images[0]})}
+  saveCart();updateCartUI();showToast('Ajouté — Taille '+size);
+  setTimeout(()=>toggleCart(),350);
+}
+function removeFromCart(key){cart=cart.filter(x=>x.key!==key);saveCart();updateCartUI();renderCartBody()}
+function updateCartUI(){
+  const total=cart.reduce((s,x)=>s+x.qty,0);
+}
+function renderCartBody(){
+  const body=document.getElementById('cartBody'),foot=document.getElementById('cartFoot');
+  if(!cart.length){
+    body.innerHTML='<div class="cart-empty"><p>Votre panier est vide</p><a href="#bestsellers" class="show-all-btn" style="font-size:.72rem;letter-spacing:.14em" onclick="toggleCart()">Voir la collection</a></div>';
+    foot.style.display='none';return;
+  }
+  foot.style.display='block';body.innerHTML='';
+  let subtotal=0;
+  cart.forEach(item=>{
+    subtotal+=parseFloat(item.price)*item.qty;
+    const el=document.createElement('div');el.className='cart-item';
+    const short=item.title.replace(/^T-[Ss]hirt Casablanca /,'');
+    el.innerHTML=`<img src="${item.image}" alt="${item.title}"><div><div class="cart-item-name">${short}</div><div class="cart-item-size">Taille : ${item.size} · ×${item.qty}</div><div class="cart-item-price">${fmt(parseFloat(item.price)*item.qty)}</div><button class="cart-remove" onclick="removeFromCart('${item.key}')">Supprimer</button></div>`;
+    body.appendChild(el);
+  });
+  document.getElementById('cartTotal').textContent=fmt(subtotal);
+  const remain=150-subtotal;
+  const bar=document.getElementById('freeShipBar');
+  if(remain>0){
+    bar.innerHTML=`Plus que ${fmt(remain)} pour la livraison offerte<div class="ship-progress"><div class="ship-fill" style="width:${Math.min(100,(subtotal/150)*100)}%"></div></div>`;
+  } else {
+    bar.innerHTML='✓ Livraison offerte appliquée';
+  }
+}
+function toggleCart(){
+  const ov=document.getElementById('cartOverlay');
+  const open=ov.classList.toggle('open');
+  document.body.style.overflow=open?'hidden':'';
+  if(open)renderCartBody();
+}
+function closeCartOverlay(e){if(e.target===e.currentTarget)toggleCart()}
+
+/* ── FAQ ── */
+document.querySelectorAll('.faq-q').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    const item=btn.parentElement;
+    const wasOpen=item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));
+    if(!wasOpen)item.classList.add('open');
+  });
+});
+
+/* ── TIMER ── */
+(function(){
+  const key='co_timer_end';
+  let end=parseInt(localStorage.getItem(key)||'0');
+  if(!end||end<Date.now()){
+    end=Date.now()+23*3600000+47*60000+12000;
+    localStorage.setItem(key,end);
+  }
+  function tick(){
+    const diff=Math.max(0,end-Date.now());
+    const h=Math.floor(diff/3600000);
+    const m=Math.floor((diff%3600000)/60000);
+    const s=Math.floor((diff%60000)/1000);
+    document.getElementById('timerH').textContent=String(h).padStart(2,'0');
+    document.getElementById('timerM').textContent=String(m).padStart(2,'0');
+    document.getElementById('timerS').textContent=String(s).padStart(2,'0');
+  }
+  tick();
+  setInterval(tick,1000);
+})();
+
+/* ── SCROLL ── */
+window.addEventListener('scroll',()=>{
+  document.getElementById('mainNav').classList.toggle('scrolled',scrollY>40);
+  document.getElementById('scrollTop').classList.toggle('visible',scrollY>400);
+});
+
+/* ── INIT ── */
+renderBest();
+updateCartUI();
+</script>
+</body>
+</html>

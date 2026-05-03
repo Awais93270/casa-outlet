@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Casa Outlet — Casablanca Paris | Jusqu'à -55%</title>
+<meta name="description" content="Casa Outlet — T-shirts Casablanca Paris en édition outlet. Coton biologique, imprimés iconiques. Jusqu'à -55% sur les prix officiels.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+img{display:block;max-width:100%}
+button{cursor:pointer;border:none;background:none;font:inherit}
+a{text-decoration:none;color:inherit}
+
+:root{
+  --cream:#F5F0E8;
+  --cream2:#EDE8DF;
+  --ink:#0C0A08;
+  --ink2:#2A2520;
+  --ink3:#6B6560;
+  --gold:#C8A96E;
+  --gold2:#A88B52;
+  --red:#C0392B;
+  --white:#FFFFFF;
+  --border:rgba(12,10,8,.12);
+  --ease:.3s cubic-bezier(.25,.46,.45,.94);
+  --spring:.55s cubic-bezier(.16,1,.3,1);
+}
+
+body{font-family:'Inter',sans-serif;background:var(--cream);color:var(--ink);overflow-x:hidden}
+
+/* ANNOUNCEMENT */
+.ann-bar{background:var(--ink);color:var(--cream);text-align:center;padding:10px 20px;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;font-weight:500;overflow:hidden}
+.ann-bar span{display:inline-block;white-space:nowrap;animation:marquee 30s linear infinite}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:900;background:var(--cream);border-bottom:1px solid var(--border);padding:0 40px;display:flex;align-items:center;justify-content:space-between;height:64px;transition:box-shadow .3s}
+nav.scrolled{box-shadow:0 2px 20px rgba(0,0,0,.08)}
+.nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.55rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase}
+.nav-logo span{color:var(--gold)}
+.nav-links{display:flex;gap:32px;list-style:none}
+.nav-links a{font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;font-weight:500;color:var(--ink2);transition:color .2s;padding-bottom:2px;border-bottom:1px solid transparent}
+.nav-links a:hover,.nav-links a.active{color:var(--ink);border-color:var(--gold)}
+.nav-right{display:flex;align-items:center;gap:16px}
+.cart-btn{position:relative;padding:8px;transition:opacity .2s;cursor:pointer}
+.cart-btn:hover{opacity:.7}
+.cart-count{position:absolute;top:2px;right:2px;background:var(--ink);color:var(--cream);font-size:.6rem;width:16px;height:16px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:600;display:none}
+.cart-count.visible{display:flex}
+.nav-burger{display:none;flex-direction:column;gap:5px;padding:8px;cursor:pointer}
+.nav-burger span{display:block;width:22px;height:1.5px;background:var(--ink)}
+
+/* HERO */
+.hero{min-height:68vh;background:var(--ink);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:80px 40px;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 60% 40%,rgba(200,169,110,.12) 0%,transparent 60%);pointer-events:none}
+.hero-eyebrow{font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:24px;animation:fadeUp .8s var(--spring) both}
+.hero-title{font-family:'Cormorant Garamond',serif;font-size:clamp(3.5rem,9vw,8rem);font-weight:300;color:var(--white);line-height:1;letter-spacing:-.01em;animation:fadeUp .9s var(--spring) .1s both}
+.hero-title em{font-style:italic;color:var(--gold)}
+.hero-sub{font-size:clamp(.85rem,1.8vw,1rem);color:rgba(245,240,232,.55);margin-top:20px;letter-spacing:.05em;max-width:520px;animation:fadeUp 1s var(--spring) .2s both}
+.hero-cta{margin-top:40px;display:flex;gap:16px;flex-wrap:wrap;justify-content:center;animation:fadeUp 1s var(--spring) .3s both}
+.btn-primary{background:var(--gold);color:var(--ink);padding:14px 36px;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;transition:background .2s,transform .15s;display:inline-block}
+.btn-primary:hover{background:var(--gold2);transform:translateY(-1px)}
+.btn-outline{border:1px solid rgba(245,240,232,.35);color:var(--cream);padding:14px 36px;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;font-weight:500;transition:border-color .2s,color .2s;display:inline-block;cursor:pointer}
+.btn-outline:hover{border-color:var(--cream);color:var(--white)}
+.hero-badge{position:absolute;top:30px;right:40px;border:1px solid var(--gold);color:var(--gold);padding:10px 18px;font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;border-radius:100px;animation:fadeIn 1.2s both .5s}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+
+/* STATS */
+.stats-strip{background:var(--cream2);border-bottom:1px solid var(--border);display:flex;justify-content:center}
+.stat-item{flex:1;max-width:220px;padding:22px 16px;text-align:center;border-right:1px solid var(--border)}
+.stat-item:last-child{border-right:none}
+.stat-num{font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:500;color:var(--ink)}
+.stat-label{font-size:.65rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink3);margin-top:3px}
+
+/* FILTER */
+.filter-bar{padding:36px 40px 20px;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.filter-title{font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink3);font-weight:500;margin-right:8px}
+.filter-btn{padding:8px 20px;border:1px solid var(--border);border-radius:100px;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;font-weight:500;color:var(--ink2);transition:var(--ease);background:transparent;cursor:pointer}
+.filter-btn:hover,.filter-btn.active{background:var(--ink);color:var(--cream);border-color:var(--ink)}
+.filter-count{margin-left:auto;font-size:.72rem;color:var(--ink3);letter-spacing:.06em}
+.collection-label{padding:0 40px 16px;font-family:'Cormorant Garamond',serif;font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink3);font-weight:400}
+
+/* GRID */
+.product-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border-top:1px solid var(--border)}
+.product-card{background:var(--cream);position:relative;overflow:hidden;cursor:pointer}
+.product-img-wrap{position:relative;aspect-ratio:3/4;overflow:hidden;background:var(--cream2)}
+.product-img-wrap img{width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.25,.46,.45,.94)}
+.product-img-wrap .img-hover{position:absolute;inset:0;opacity:0;transition:opacity .4s ease}
+.product-card:hover .img-hover{opacity:1}
+.product-card:hover .img-main{transform:scale(1.03)}
+.product-badge{position:absolute;top:12px;left:12px;background:var(--red);color:#fff;font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;font-weight:700;padding:4px 10px}
+.quick-btn{position:absolute;bottom:16px;left:50%;transform:translateX(-50%) translateY(8px);background:var(--ink);color:var(--cream);white-space:nowrap;padding:10px 24px;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;font-weight:500;opacity:0;transition:opacity .3s,transform .3s;pointer-events:none;cursor:pointer}
+.product-card:hover .quick-btn{opacity:1;transform:translateX(-50%) translateY(0);pointer-events:auto}
+.product-info{padding:14px 16px 18px}
+.product-name{font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:500;line-height:1.3;color:var(--ink);margin-bottom:8px}
+.product-pricing{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.price-current{font-size:.9rem;font-weight:600;color:var(--ink)}
+.price-compare{font-size:.82rem;color:var(--ink3);text-decoration:line-through}
+.price-off{font-size:.65rem;letter-spacing:.08em;background:var(--red);color:#fff;padding:2px 7px;font-weight:600}
+
+/* MODAL */
+.modal-overlay{position:fixed;inset:0;background:rgba(12,10,8,.7);z-index:1000;display:flex;align-items:center;justify-content:center;padding:24px;opacity:0;pointer-events:none;transition:opacity .3s;backdrop-filter:blur(4px)}
+.modal-overlay.open{opacity:1;pointer-events:auto}
+.modal{background:var(--cream);width:100%;max-width:960px;max-height:90vh;overflow-y:auto;display:grid;grid-template-columns:1fr 1fr;transform:translateY(20px) scale(.98);transition:transform .35s var(--spring)}
+.modal-overlay.open .modal{transform:translateY(0) scale(1)}
+.modal-gallery{position:relative;background:var(--cream2)}
+.modal-gallery-main{aspect-ratio:3/4;overflow:hidden}
+.modal-gallery-main img{width:100%;height:100%;object-fit:cover;transition:opacity .3s}
+.modal-thumbs{display:flex;gap:6px;padding:10px;overflow-x:auto;background:var(--cream2)}
+.modal-thumb{width:60px;height:75px;flex-shrink:0;object-fit:cover;cursor:pointer;border:2px solid transparent;opacity:.65;transition:opacity .2s,border-color .2s}
+.modal-thumb.active{border-color:var(--ink);opacity:1}
+.modal-info{padding:40px 36px;display:flex;flex-direction:column;overflow-y:auto}
+.modal-brand{font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:10px}
+.modal-title{font-family:'Cormorant Garamond',serif;font-size:1.75rem;font-weight:500;line-height:1.2;color:var(--ink);margin-bottom:16px}
+.modal-pricing{display:flex;align-items:baseline;gap:12px;margin-bottom:28px;flex-wrap:wrap}
+.modal-price{font-size:1.4rem;font-weight:600;color:var(--ink)}
+.modal-compare{font-size:1rem;color:var(--ink3);text-decoration:line-through}
+.modal-saving{font-size:.7rem;letter-spacing:.1em;background:var(--red);color:#fff;padding:3px 10px;font-weight:600}
+.modal-size-label{font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink3);font-weight:500;margin-bottom:12px}
+.size-grid{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:28px}
+.size-opt{border:1px solid var(--border);width:50px;height:44px;display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:500;cursor:pointer;transition:var(--ease);color:var(--ink2)}
+.size-opt:hover,.size-opt.selected{background:var(--ink);color:var(--cream);border-color:var(--ink)}
+.modal-add-btn{background:var(--ink);color:var(--cream);padding:16px 32px;font-size:.75rem;letter-spacing:.15em;text-transform:uppercase;font-weight:600;width:100%;transition:background .2s;margin-bottom:16px;cursor:pointer}
+.modal-add-btn:hover{background:var(--ink2)}
+.modal-add-btn:disabled{opacity:.45;cursor:not-allowed}
+.modal-features{display:flex;flex-direction:column;gap:10px;margin-top:20px;padding-top:20px;border-top:1px solid var(--border)}
+.modal-feature{display:flex;gap:12px;align-items:center;font-size:.75rem;color:var(--ink3)}
+.modal-close{position:absolute;top:12px;right:12px;width:36px;height:36px;background:var(--ink);color:var(--cream);display:flex;align-items:center;justify-content:center;font-size:1rem;z-index:10;border-radius:50%;cursor:pointer;transition:background .2s}
+.modal-close:hover{background:var(--ink2)}
+
+/* CART */
+.cart-overlay{position:fixed;inset:0;background:rgba(12,10,8,.5);z-index:1100;opacity:0;pointer-events:none;transition:opacity .3s}
+.cart-overlay.open{opacity:1;pointer-events:auto}
+.cart-drawer{position:fixed;top:0;right:0;bottom:0;width:min(420px,100vw);background:var(--cream);transform:translateX(100%);transition:transform .4s var(--spring);z-index:1101;display:flex;flex-direction:column}
+.cart-overlay.open .cart-drawer{transform:translateX(0)}
+.cart-head{padding:24px 28px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between}
+.cart-head h2{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:500}
+.cart-close{width:32px;height:32px;display:flex;align-items:center;justify-content:center;font-size:1.2rem;color:var(--ink3);cursor:pointer;transition:color .2s}
+.cart-close:hover{color:var(--ink)}
+.cart-body{flex:1;overflow-y:auto;padding:20px 28px}
+.cart-empty{text-align:center;padding:60px 0}
+.cart-empty p{font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:var(--ink3);margin-bottom:24px}
+.cart-item{display:grid;grid-template-columns:80px 1fr auto;gap:14px;padding:16px 0;border-bottom:1px solid var(--border)}
+.cart-item img{width:80px;height:100px;object-fit:cover;background:var(--cream2)}
+.cart-item-name{font-family:'Cormorant Garamond',serif;font-size:.95rem;font-weight:500;line-height:1.3;margin-bottom:4px}
+.cart-item-size{font-size:.72rem;color:var(--ink3);letter-spacing:.05em;text-transform:uppercase}
+.cart-item-price{font-size:.9rem;font-weight:600;margin-top:6px}
+.cart-remove{font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);text-decoration:underline;cursor:pointer;margin-top:6px;background:none;border:none;padding:0}
+.cart-remove:hover{color:var(--red)}
+.cart-foot{padding:20px 28px 32px;border-top:1px solid var(--border)}
+.cart-subtotal{display:flex;justify-content:space-between;margin-bottom:16px;align-items:baseline}
+.cart-subtotal span{font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3)}
+.cart-subtotal strong{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:500}
+.cart-checkout{background:var(--ink);color:var(--cream);padding:16px;font-size:.75rem;letter-spacing:.15em;text-transform:uppercase;font-weight:600;width:100%;transition:background .2s;cursor:pointer}
+.cart-checkout:hover{background:var(--ink2)}
+.free-ship-bar{margin-bottom:16px;font-size:.7rem;color:var(--ink3);text-align:center}
+.ship-progress{height:3px;background:var(--border);border-radius:2px;margin-top:6px;overflow:hidden}
+.ship-fill{height:100%;background:var(--gold);border-radius:2px;transition:width .4s}
+
+/* QUICK */
+.quick-overlay{position:fixed;inset:0;background:rgba(12,10,8,.45);z-index:1050;opacity:0;pointer-events:none;transition:opacity .3s}
+.quick-overlay.open{opacity:1;pointer-events:auto}
+.quick-drawer{position:fixed;bottom:0;left:0;right:0;background:var(--cream);transform:translateY(100%);transition:transform .4s var(--spring);z-index:1051;padding:28px 24px 40px;border-top:1px solid var(--border);max-height:70vh;overflow-y:auto}
+.quick-overlay.open .quick-drawer{transform:translateY(0)}
+.quick-inner{max-width:480px;margin:0 auto;position:relative}
+.quick-head{display:flex;gap:16px;margin-bottom:20px}
+.quick-head img{width:70px;height:90px;object-fit:cover;background:var(--cream2);flex-shrink:0}
+.quick-name{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:500;line-height:1.3}
+.quick-prices{display:flex;align-items:baseline;gap:8px;margin-top:8px}
+.quick-price{font-size:1rem;font-weight:600}
+.quick-compare{font-size:.8rem;color:var(--ink3);text-decoration:line-through}
+.quick-size-label{font-size:.65rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink3);font-weight:500;margin-bottom:10px}
+.quick-size-grid{display:flex;gap:8px;margin-bottom:20px;flex-wrap:wrap}
+.quick-size-opt{border:1px solid var(--border);min-width:44px;height:40px;padding:0 12px;display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:500;cursor:pointer;transition:var(--ease)}
+.quick-size-opt:hover,.quick-size-opt.selected{background:var(--ink);color:var(--cream);border-color:var(--ink)}
+.quick-add{background:var(--ink);color:var(--cream);padding:14px;font-size:.73rem;letter-spacing:.15em;text-transform:uppercase;font-weight:600;width:100%;transition:background .2s;cursor:pointer}
+.quick-add:hover{background:var(--ink2)}
+.quick-add:disabled{opacity:.45;cursor:not-allowed}
+.quick-close-btn{position:absolute;top:0;right:0;font-size:1.2rem;color:var(--ink3);cursor:pointer;padding:4px;transition:color .2s}
+.quick-close-btn:hover{color:var(--ink)}
+
+/* NEWSLETTER */
+.newsletter{background:var(--ink);color:var(--cream);padding:80px 40px;text-align:center}
+.newsletter h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3.2rem);font-weight:300;margin-bottom:12px}
+.newsletter h2 em{font-style:italic;color:var(--gold)}
+.newsletter p{font-size:.85rem;color:rgba(245,240,232,.5);margin-bottom:32px;letter-spacing:.04em}
+.nl-form{display:flex;max-width:440px;margin:0 auto}
+.nl-input{flex:1;background:rgba(245,240,232,.1);border:1px solid rgba(245,240,232,.25);border-right:none;color:var(--cream);padding:14px 18px;font-size:.82rem;outline:none;font-family:'Inter',sans-serif;transition:border-color .2s}
+.nl-input::placeholder{color:rgba(245,240,232,.35)}
+.nl-input:focus{border-color:var(--gold)}
+.nl-submit{background:var(--gold);color:var(--ink);padding:14px 24px;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;transition:background .2s;white-space:nowrap;border:1px solid var(--gold);cursor:pointer}
+.nl-submit:hover{background:var(--gold2)}
+
+/* FOOTER */
+footer{background:var(--cream2);border-top:1px solid var(--border);padding:48px 40px 32px}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px}
+.footer-brand{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:600;letter-spacing:.08em;margin-bottom:12px}
+.footer-brand span{color:var(--gold)}
+.footer-desc{font-size:.78rem;color:var(--ink3);line-height:1.7;max-width:260px}
+.footer-col h4{font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink3);font-weight:600;margin-bottom:16px}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+.footer-col li a{font-size:.78rem;color:var(--ink2);transition:color .2s}
+.footer-col li a:hover{color:var(--ink)}
+.footer-bottom{border-top:1px solid var(--border);padding-top:20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.footer-copy{font-size:.7rem;color:var(--ink3);letter-spacing:.06em}
+.footer-payments{display:flex;gap:8px;align-items:center}
+.pay-badge{background:var(--border);border-radius:4px;padding:4px 10px;font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink3);font-weight:600}
+
+/* TOAST */
+.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(80px);background:var(--ink);color:var(--cream);padding:14px 28px;font-size:.78rem;letter-spacing:.06em;z-index:2000;transition:transform .4s var(--spring),opacity .4s;opacity:0;white-space:nowrap;pointer-events:none}
+.toast.show{transform:translateX(-50%) translateY(0);opacity:1}
+
+/* MOBILE MENU */
+.mobile-menu{position:fixed;inset:0;background:var(--cream);z-index:950;display:flex;flex-direction:column;align-items:center;justify-content:center;transform:translateX(-100%);transition:transform .4s var(--spring)}
+.mobile-menu.open{transform:translateX(0)}
+.mobile-menu ul{list-style:none;text-align:center}
+.mobile-menu li{margin:16px 0}
+.mobile-menu a{font-family:'Cormorant Garamond',serif;font-size:2.5rem;font-weight:300;letter-spacing:.04em;color:var(--ink);transition:color .2s}
+.mobile-menu a:hover{color:var(--gold)}
+.mobile-close{position:absolute;top:20px;right:20px;font-size:1.5rem;color:var(--ink3);cursor:pointer}
+
+/* POPUP */
+.popup-overlay{position:fixed;inset:0;background:rgba(12,10,8,.6);z-index:1200;display:flex;align-items:center;justify-content:center;padding:24px;opacity:0;pointer-events:none;transition:opacity .4s}
+.popup-overlay.open{opacity:1;pointer-events:auto}
+.popup{background:var(--ink);max-width:520px;width:100%;padding:56px 48px;text-align:center;position:relative;transform:scale(.95);transition:transform .4s var(--spring)}
+.popup-overlay.open .popup{transform:scale(1)}
+.popup-eyebrow{font-size:.65rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:16px}
+.popup h2{font-family:'Cormorant Garamond',serif;font-size:2.4rem;font-weight:300;color:var(--cream);margin-bottom:12px;line-height:1.1}
+.popup h2 em{color:var(--gold);font-style:italic}
+.popup p{font-size:.82rem;color:rgba(245,240,232,.5);margin-bottom:28px;line-height:1.6}
+.popup-close{position:absolute;top:16px;right:20px;color:rgba(245,240,232,.4);font-size:1.2rem;cursor:pointer;transition:color .2s}
+.popup-close:hover{color:var(--cream)}
+.popup-form{display:flex;flex-direction:column;gap:12px}
+.popup-input{background:rgba(245,240,232,.08);border:1px solid rgba(245,240,232,.2);color:var(--cream);padding:13px 16px;font-size:.82rem;outline:none;font-family:'Inter',sans-serif;transition:border-color .2s}
+.popup-input::placeholder{color:rgba(245,240,232,.3)}
+.popup-input:focus{border-color:var(--gold)}
+.popup-submit{background:var(--gold);color:var(--ink);padding:14px;font-size:.73rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700;transition:background .2s;cursor:pointer}
+.popup-submit:hover{background:var(--gold2)}
+.popup-skip{margin-top:14px;font-size:.7rem;color:rgba(245,240,232,.3);cursor:pointer;text-decoration:underline;transition:color .2s;background:none;border:none;font-family:'Inter',sans-serif}
+.popup-skip:hover{color:rgba(245,240,232,.6)}
+
+/* SCROLL TOP */
+.scroll-top{position:fixed;bottom:24px;right:24px;width:44px;height:44px;background:var(--ink);color:var(--cream);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1rem;z-index:500;opacity:0;pointer-events:none;transition:opacity .3s,transform .3s;transform:translateY(8px);cursor:pointer}
+.scroll-top.visible{opacity:1;pointer-events:auto;transform:translateY(0)}
+.scroll-top:hover{background:var(--ink2)}
+
+/* EDITORIAL BANNER */
+.ed-banner{position:relative;height:90vh;overflow:hidden;min-height:540px;display:grid;grid-template-columns:1.1fr 1fr}
+.eb-img-side{position:relative;overflow:hidden}
+.eb-img-side img{width:100%;height:100%;object-fit:cover;object-position:center center;display:block;transition:transform .8s cubic-bezier(.25,.46,.45,.94)}
+.ed-banner:hover .eb-img-side img{transform:scale(1.03)}
+.eb-text-side{background:var(--ink);display:flex;flex-direction:column;justify-content:center;padding:80px 64px;position:relative}
+.eb-text-side::before{content:'';position:absolute;top:40px;left:40px;right:40px;bottom:40px;border:1px solid rgba(200,169,110,.15);pointer-events:none}
+.eb-eyebrow{font-size:.62rem;letter-spacing:.26em;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:28px}
+.eb-title{font-family:'Cormorant Garamond',serif;font-size:clamp(3.2rem,5.5vw,5.8rem);font-weight:300;color:var(--white);line-height:.9;margin-bottom:24px;letter-spacing:-.01em}
+.eb-title em{color:var(--gold);font-style:italic;display:block}
+.eb-sub{font-size:.82rem;color:rgba(245,240,232,.42);margin-bottom:44px;letter-spacing:.05em;line-height:1.75;max-width:320px}
+.eb-cta{display:inline-block;background:var(--gold);color:var(--ink);padding:15px 38px;font-size:.73rem;letter-spacing:.16em;text-transform:uppercase;font-weight:600;transition:background .2s,transform .15s;cursor:pointer;border:none;align-self:flex-start}
+.eb-cta:hover{background:var(--gold2);transform:translateY(-2px)}
+.eb-ghost{display:inline-block;border:1px solid rgba(245,240,232,.25);color:rgba(245,240,232,.6);padding:15px 32px;font-size:.73rem;letter-spacing:.16em;text-transform:uppercase;font-weight:400;cursor:pointer;background:none;transition:border-color .2s,color .2s;margin-top:14px;align-self:flex-start}
+.eb-ghost:hover{border-color:var(--gold);color:var(--gold)}
+
+/* RESPONSIVE */
+@media(max-width:1100px){.product-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:768px){
+  .ed-banner{grid-template-columns:1fr;height:auto;min-height:auto}
+  .eb-img-side{height:55vw;min-height:280px}
+  .eb-text-side{padding:44px 24px}
+  .eb-text-side::before{top:16px;left:16px;right:16px;bottom:16px}
+  nav{padding:0 20px}
+  .nav-links{display:none}
+  .nav-burger{display:flex}
+  .hero{padding:60px 24px}
+  .hero-badge{display:none}
+  .stats-strip{flex-wrap:wrap}
+  .stat-item{flex:50%;border-bottom:1px solid var(--border)}
+  .filter-bar{padding:20px 20px 12px}
+  .collection-label{padding:0 20px 12px}
+  .product-grid{grid-template-columns:repeat(2,1fr)}
+  .modal{grid-template-columns:1fr;max-height:95vh}
+  .modal-gallery-main{aspect-ratio:1/1}
+  .modal-info{padding:24px 20px}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .nl-form{flex-direction:column}
+  .nl-input{border-right:1px solid rgba(245,240,232,.25);border-bottom:none}
+  .footer-payments{display:none}
+  .newsletter{padding:60px 24px}
+  footer{padding:40px 20px 24px}
+  .popup{padding:40px 28px}
+  .popup h2{font-size:1.8rem}
+}
+@media(max-width:480px){
+  .product-grid{grid-template-columns:repeat(2,1fr)}
+  .product-name{font-size:.92rem}
+  .product-info{padding:10px 12px 14px}
+}
+</style>
+</head>
+<body>
+
+<!-- ANNOUNCEMENT BAR -->
+<div class="ann-bar">
+  <span>Livraison offerte dès 150€ &nbsp;·&nbsp; T-shirts Casablanca Paris en édition outlet &nbsp;·&nbsp; Jusqu'à -55% sur les prix officiels &nbsp;·&nbsp; 100% coton biologique &nbsp;·&nbsp; Expédition sous 24h &nbsp;·&nbsp; Livraison offerte dès 150€ &nbsp;·&nbsp; T-shirts Casablanca Paris en édition outlet &nbsp;·&nbsp; Jusqu'à -55% sur les prix officiels &nbsp;·&nbsp; 100% coton biologique &nbsp;·&nbsp; Expédition sous 24h &nbsp;·&nbsp;</span>
+</div>
+
+<!-- NAV -->
+<nav id="mainNav">
+  <div class="nav-logo">Casa<span>Outlet</span></div>
+  <ul class="nav-links">
+    <li><a href="#" class="active">Accueil</a></li>
+    <li><a href="#collection">Collection</a></li>
+    <li><a href="#collection" onclick="filterProducts('Tennis',null);document.getElementById('collection').scrollIntoView({behavior:'smooth'});return false">Tennis Club</a></li>
+    <li><a href="#collection" onclick="filterProducts('Blanc',null);document.getElementById('collection').scrollIntoView({behavior:'smooth'});return false">Blanc</a></li>
+    <li><a href="#collection" onclick="filterProducts('Noir',null);document.getElementById('collection').scrollIntoView({behavior:'smooth'});return false">Noir</a></li>
+  </ul>
+  <div class="nav-right">
+    <button class="cart-btn" onclick="toggleCart()" aria-label="Panier">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+      <span class="cart-count" id="cartCount">0</span>
+    </button>
+    <div class="nav-burger" onclick="toggleMobileMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <span class="mobile-close" onclick="toggleMobileMenu()">✕</span>
+  <ul>
+    <li><a href="#" onclick="toggleMobileMenu()">Accueil</a></li>
+    <li><a href="#collection" onclick="toggleMobileMenu()">Collection</a></li>
+    <li><a href="#collection" onclick="filterProducts('Tennis',null);toggleMobileMenu();document.getElementById('collection').scrollIntoView({behavior:'smooth'})">Tennis Club</a></li>
+    <li><a href="#collection" onclick="filterProducts('Blanc',null);toggleMobileMenu();document.getElementById('collection').scrollIntoView({behavior:'smooth'})">Blanc</a></li>
+    <li><a href="#collection" onclick="filterProducts('Noir',null);toggleMobileMenu();document.getElementById('collection').scrollIntoView({behavior:'smooth'})">Noir</a></li>
+  </ul>
+</div>
+
+<!-- EDITORIAL BANNER — HERO -->
+<section class="ed-banner">
+  <div class="eb-img-side">
+    <img src="banner.avif" alt="Casablanca Paris — Collection Outlet" loading="eager">
+  </div>
+  <div class="eb-text-side">
+    <p class="eb-eyebrow">Casablanca Paris · Outlet 2024</p>
+    <h1 class="eb-title">Casa<em>Outlet</em></h1>
+    <p class="eb-sub">Les pièces iconiques Casablanca Paris en édition outlet. Imprimés signatures, coton biologique — jusqu'à -55%.</p>
+    <a href="#collection" class="eb-cta">Voir la collection</a>
+    <button class="eb-ghost" onclick="filterProducts('Tennis',null);document.getElementById('collection').scrollIntoView({behavior:'smooth'})">Tennis Club ↗</button>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats-strip">
+  <div class="stat-item"><div class="stat-num">55</div><div class="stat-label">Modèles disponibles</div></div>
+  <div class="stat-item"><div class="stat-num">-55%</div><div class="stat-label">Remise maximale</div></div>
+  <div class="stat-item"><div class="stat-num">24h</div><div class="stat-label">Expédition</div></div>
+  <div class="stat-item"><div class="stat-num">100%</div><div class="stat-label">Coton biologique</div></div>
+</div>
+
+<!-- FILTER + GRID -->
+<section id="collection">
+  <div class="filter-bar">
+    <span class="filter-title">Filtrer</span>
+    <button class="filter-btn active" onclick="filterProducts('all',this)">Tous</button>
+    <button class="filter-btn" onclick="filterProducts('Chemise',this)">Chemises</button>
+    <button class="filter-btn" onclick="filterProducts('Short',this)">Shorts</button>
+    <button class="filter-btn" onclick="filterProducts('Tennis',this)">Tennis Club</button>
+    <button class="filter-btn" onclick="filterProducts('Blanc',this)">Blanc</button>
+    <button class="filter-btn" onclick="filterProducts('Noir',this)">Noir</button>
+    <button class="filter-btn" onclick="filterProducts('Rose',this)">Rose</button>
+    <button class="filter-btn" onclick="filterProducts('Vert',this)">Vert</button>
+    <button class="filter-btn" onclick="filterProducts('Bleu',this)">Bleu</button>
+    <button class="filter-btn" onclick="filterProducts('Rouge',this)">Rouge</button>
+    <span class="filter-count" id="filterCount">55 articles · Tous les modèles</span>
+  </div>
+  <div class="collection-label">Collection Casablanca Paris — Édition Outlet 2024</div>
+  <div class="product-grid" id="productGrid"></div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="newsletter">
+  <h2>Restez dans <em>l'univers</em></h2>
+  <p>Nouveautés, offres exclusives et avant-premières — directement dans votre boîte.</p>
+  <form class="nl-form" onsubmit="submitNewsletter(event)">
+    <input class="nl-input" type="email" placeholder="votre@email.com" required>
+    <button class="nl-submit" type="submit">S'inscrire</button>
+  </form>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-brand">Casa<span>Outlet</span></div>
+      <p class="footer-desc">Votre destination outlet pour les t-shirts Casablanca Paris. Imprimés iconiques, coton biologique, prix outlet.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Navigation</h4>
+      <ul>
+        <li><a href="#">Accueil</a></li>
+        <li><a href="#collection">Collection</a></li>
+        <li><a href="#" onclick="filterProducts('Tennis',null);return false">Tennis Club</a></li>
+        <li><a href="#" onclick="filterProducts('Noir',null);return false">Modèles Noir</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Informations</h4>
+      <ul>
+        <li><a href="#">À propos</a></li>
+        <li><a href="#">Livraison</a></li>
+        <li><a href="#">Retours</a></li>
+        <li><a href="#">Guide des tailles</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Légal</h4>
+      <ul>
+        <li><a href="#">Mentions légales</a></li>
+        <li><a href="#">CGV</a></li>
+        <li><a href="#">Confidentialité</a></li>
+        <li><a href="#">Cookies</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p class="footer-copy">© 2024 CasaOutlet. Tous droits réservés.</p>
+    <div class="footer-payments">
+      <span class="pay-badge">Visa</span>
+      <span class="pay-badge">Mastercard</span>
+      <span class="pay-badge">PayPal</span>
+      <span class="pay-badge">Apple Pay</span>
+    </div>
+  </div>
+</footer>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modalOverlay" onclick="closeModal(event)">
+  <div class="modal" id="modal">
+    <div class="modal-gallery">
+      <button class="modal-close" onclick="closeModalBtn()">✕</button>
+      <div class="modal-gallery-main"><img id="modalMainImg" src="" alt=""></div>
+      <div class="modal-thumbs" id="modalThumbs"></div>
+    </div>
+    <div class="modal-info">
+      <div class="modal-brand">Casablanca Paris · Outlet</div>
+      <h2 class="modal-title" id="modalTitle"></h2>
+      <div class="modal-pricing">
+        <span class="modal-price" id="modalPrice"></span>
+        <span class="modal-compare" id="modalCompare"></span>
+        <span class="modal-saving" id="modalSaving"></span>
+      </div>
+      <div class="modal-size-label">Choisir une taille</div>
+      <div class="size-grid" id="modalSizeGrid"></div>
+      <button class="modal-add-btn" id="modalAddBtn" onclick="addFromModal()" disabled>Choisir une taille d'abord</button>
+      <div class="modal-features">
+        <div class="modal-feature">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          Expédition sous 24 heures ouvrées
+        </div>
+        <div class="modal-feature">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          100% coton biologique certifié
+        </div>
+        <div class="modal-feature">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>
+          Retours gratuits sous 30 jours
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- QUICK DRAWER -->
+<div class="quick-overlay" id="quickOverlay" onclick="closeQuick(event)">
+  <div class="quick-drawer">
+    <div class="quick-inner">
+      <button class="quick-close-btn" onclick="closeQuickBtn()">✕</button>
+      <div class="quick-head">
+        <img id="quickImg" src="" alt="">
+        <div>
+          <div class="quick-name" id="quickName"></div>
+          <div class="quick-prices">
+            <span class="quick-price" id="quickPrice"></span>
+            <span class="quick-compare" id="quickCompare"></span>
+          </div>
+        </div>
+      </div>
+      <div class="quick-size-label">Sélectionner une taille</div>
+      <div class="quick-size-grid" id="quickSizeGrid"></div>
+      <button class="quick-add" id="quickAddBtn" onclick="addFromQuick()" disabled>Choisir une taille d'abord</button>
+    </div>
+  </div>
+</div>
+
+<!-- CART DRAWER -->
+<div class="cart-overlay" id="cartOverlay" onclick="closeCartOverlay(event)">
+  <div class="cart-drawer">
+    <div class="cart-head">
+      <h2>Votre panier</h2>
+      <button class="cart-close" onclick="toggleCart()">✕</button>
+    </div>
+    <div class="cart-body" id="cartBody"></div>
+    <div class="cart-foot" id="cartFoot" style="display:none">
+      <div class="free-ship-bar" id="freeShipBar"></div>
+      <div class="cart-subtotal">
+        <span>Sous-total</span>
+        <strong id="cartTotal">0,00 €</strong>
+      </div>
+      <button class="cart-checkout" onclick="showToast('Redirection vers le paiement...')">Passer la commande →</button>
+    </div>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<!-- SCROLL TOP -->
+<button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<!-- POPUP -->
+<div class="popup-overlay" id="popupOverlay">
+  <div class="popup">
+    <button class="popup-close" onclick="closePopup()">✕</button>
+    <div class="popup-eyebrow">Offre réservée aux membres</div>
+    <h2>−10% sur<br>votre <em>première commande</em></h2>
+    <p>Rejoignez la communauté CasaOutlet et recevez votre code de réduction immédiatement.</p>
+    <form class="popup-form" onsubmit="submitPopup(event)">
+      <input class="popup-input" type="email" placeholder="Votre adresse email" required>
+      <button class="popup-submit" type="submit">Obtenir mon -10%</button>
+    </form>
+    <button class="popup-skip" onclick="closePopup()">Non merci, je préfère payer plein tarif</button>
+  </div>
+</div>
+
+<script>
+const PRODUCTS=[{id:0,title:"T-shirt Casablanca Blanc Tennis : Aigle Ludique",price:"109.90",compare:"230.00",images:["https://cdn.shopify.com/s/files/1/0757/4156/1098/files/tennis5.1.png?v=1717511743","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/tennis5.2.png?v=1717511743","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/tennis5.3.png?v=1717511743"]},{id:1,title:"T-shirt Casablanca Vert Tennis : Afro Cubisme (Orangé)",price:"109.90",compare:"230.00",images:["https://cdn.shopify.com/s/files/1/0757/4156/1098/files/tennis4.1.png?v=1717511755","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/tennis4.2.png?v=1717511755","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/tennis4.3.png?v=1717511755","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/tennis4.4.png?v=1717511755"]},{id:2,title:"T-Shirt Casablanca Rose : L'arc de Jour",price:"89.90",compare:"250.00",images:["https://cdn.shopify.com/s/files/1/0757/4156/1098/files/rose0.png?v=1717511970","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/Rose2.2_adc0ea12-8c35-4487-a1b4-2761ec86f3bd.png?v=1717511970","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/Rose2.3_1c9a915f-102c-4ab2-bf06-27f9fbf89944.png?v=1717511970","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/Rose2.4_6d391918-2ad2-44b3-9791-aead32e96fe6.png?v=1717511970"]},{id:3,title:"T-shirt Casablanca Blanc : Souvenir",price:"119.90",compare:"250.00",images:["https://cdn.shopify.com/s/files/1/0757/4156/1098/files/blanc12.1.png?v=1717511812","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/blanc12.2.png?v=1717511812","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/blanc12.3.png?v=1717511812"]},{id:4,title:"T-Shirt Casablanca Noir : L'arc Coloré",price:"89.90",compare:"250.00",images:["https://cdn.shopify.com/s/files/1/0757/4156/1098/files/Noir1.1.png?v=1717512047","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/Noir1.2.png?v=1717512047"]},{id:5,title:"T-Shirt Casablanca Noir : Bleu Dégradé",price:"109.90",compare:"250.00",images:["https://cdn.shopify.com/s/files/1/0757/4156/1098/files/noir2.1.png?v=1717512029","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/noir2.2.png?v=1717512029","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/noir2.3.png?v=1717512029","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/noir2.4.png?v=1717512029"]},{id:6,title:"T-Shirt Casablanca Rose : L'arc Coloré",price:"89.90",compare:"250.00",images:["https://cdn.shopify.com/s/files/1/0757/4156/1098/files/Roseclassique1.1.png?v=1717512058","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/roseclassique1.2.png?v=1717512058","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/Roseclassique1.3.png?v=1717512058","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/Roseclassique1.4.png?v=1717512058"]},{id:7,title:"T-Shirt Casablanca Noir : Triomphe d'Orange",price:"119.90",compare:"250.00",images:["https://cdn.shopify.com/s/files/1/0757/4156/1098/files/noir8.1.png?v=1717511879","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/noir8.2.png?v=1717511879","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/noir8.3.png?v=1717511879","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/noir8.4.png?v=1717511879"]},{id:8,title:"T-shirt Casablanca Blanc Tennis : Terrain Oriental",price:"109.90",compare:"230.00",images:["https://cdn.shopify.com/s/files/1/0757/4156/1098/files/tennis11.1_4a448ed4-5b80-4bd6-bb75-a6ae21eef024.png?v=1717511680","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/tennis11.2_8c8c291b-a83c-4cf0-8f9e-20a13bf6540c.png?v=1717511680","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/tennis11.3_fb97c473-65ce-4327-b0ba-80a48687d006.png?v=1717511680"]},{id:9,title:"T-shirt Casablanca Noir Tennis : Afro Cubisme (Gris)",price:"109.90",compare:"230.00",images:["https://cdn.shopify.com/s/files/1/0757/4156/1098/files/tennis8.1.png?v=1717511713","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/tennis8.2.png?v=1717511713","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/tennis8.3.png?v=1717511713","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/tennis8.4.png?v=1717511713"]},{id:10,title:"T-shirt Casablanca Noir Tennis : Terrain du Temple",price:"109.90",compare:"230.00",images:["https://cdn.shopify.com/s/files/1/0757/4156/1098/files/tennis13.1.png?v=1717511672","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/tennis13.2.png?v=1717511672","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/tennis13.3.png?v=1717511672","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/tennis13.4.png?v=1717511672"]},{id:11,title:"T-shirt Casablanca Noir Tennis : Afro Cubisme (Orangé)",price:"109.90",compare:"230.00",images:["https://cdn.shopify.com/s/files/1/0757/4156/1098/files/tennis3.1.png?v=1717511767","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/tennis3.2.png?v=1717511767","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/tennis3.3.png?v=1717511767","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/tennis3.4.png?v=1717511767"]},{id:12,title:"T-Shirt Casablanca Noir : Studio de Musique",price:"119.90",compare:"250.00",images:["https://cdn.shopify.com/s/files/1/0757/4156/1098/files/noir9.1.png?v=1717511862","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/noir9.2.png?v=1717511862"]},{id:13,title:"T-shirt Casablanca Noir : Le Jeu Coloré",price:"119.90",compare:"250.00",images:["https://cdn.shopify.com/s/files/1/0757/4156/1098/files/noir7.1.png?v=1717511901","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/noir7.2.png?v=1717511901","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/noir7.3.png?v=1717511901","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/noir7.4.png?v=1717511901"]},{id:14,title:"T-shirt Casablanca Noir : Les Éléments",price:"119.90",compare:"250.00",images:["https://cdn.shopify.com/s/files/1/0757/4156/1098/files/noir11.1.png?v=1717511850","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/noir11.2.png?v=1717511850"]},{id:15,title:"T-Shirt Casablanca Noir : L'arche Rosé",price:"79.90",compare:"250.00",images:["https://cdn.shopify.com/s/files/1/0757/4156/1098/files/noir0.png?v=1717512016","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/Noir3.2.png?v=1717512016","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/Noir3.3.png?v=1717512016","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/Noir3.4.png?v=1717512016"]},{id:16,title:"T-Shirt Casablanca Blanc : L'arche Rosé",price:"99.90",compare:"250.00",images:["https://cdn.shopify.com/s/files/1/0757/4156/1098/files/blanc2.1.png?v=1717512004","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/blanc2.2.png?v=1717512004","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/BLANC2.3.png?v=1717512004","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/BLANC2.4.png?v=1717512004"]},{id:17,title:"T-Shirt Casablanca Noir : L'Arche de Nuit",price:"89.90",compare:"250.00",images:["https://cdn.shopify.com/s/files/1/0757/4156/1098/files/noir00.png?v=1717511993","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/noir4.2.png?v=1717511993","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/noir4.3.png?v=1717511993","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/noir4.4.png?v=1717511993"]},{id:18,title:"T-shirt Casablanca Noir : Le Jeu",price:"99.90",compare:"230.00",images:["https://cdn.shopify.com/s/files/1/0757/4156/1098/files/noir6.1.png?v=1717511918","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/noir6.2.png?v=1717511918","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/noir6.3.png?v=1717511918","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/noir6.4.png?v=1717511918"]},{id:19,title:"T-shirt Casablanca Noir : Panoramique",price:"119.90",compare:"250.00",images:["https://cdn.shopify.com/s/files/1/0757/4156/1098/files/noir10.1.png?v=1717511857","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/noir10.2.png?v=1717511857"]},{id:20,title:"T-shirt Casablanca Blanc Tennis : La Joueuse",price:"109.90",compare:"230.00",images:["https://cdn.shopify.com/s/files/1/0757/4156/1098/files/tennis12.1.png?v=1717511689","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/tennis12.2.png?v=1717511689","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/tennis12.3.png?v=1717511689"]},{id:21,title:"T-shirt Casablanca Blanc Tennis : Afro Cubisme (Orangé)",price:"109.90",compare:"230.00",images:["https://cdn.shopify.com/s/files/1/0757/4156/1098/files/tennis2.1.png?v=1717511779","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/tennis2.2.png?v=1717511779","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/tennis2.3.png?v=1717511779","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/tennis2.4.png?v=1717511780"]},{id:22,title:"T-shirt Casablanca Rose Tennis : La Joueuse",price:"109.90",compare:"230.00",images:["https://cdn.shopify.com/s/files/1/0757/4156/1098/files/tennis14.1.png?v=1717511662","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/tennis14.2.png?v=1717511662","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/tennis14.3.png?v=1717511662"]},{id:23,title:"T-shirt Casablanca Blanc Tennis : Cour Royale",price:"109.90",compare:"200.00",images:["https://cdn.shopify.com/s/files/1/0757/4156/1098/files/tennis15.1.png?v=1717511654","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/tennis15.2.png?v=1717511654"]},{id:24,title:"T-shirt Casablanca Blanc Tennis : Afro Cubisme (Gris)",price:"109.90",compare:"230.00",images:["https://cdn.shopify.com/s/files/1/0757/4156/1098/files/tennis9.1.png?v=1717511702","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/tennis9.2.png?v=1717511702","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/tennis9.3.png?v=1717511702"]},{id:25,title:"T-shirt Casablanca Noir Tennis : Terrain Parisien",price:"109.90",compare:"230.00",images:["https://cdn.shopify.com/s/files/1/0757/4156/1098/files/tennis10.1.png?v=1717511694","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/tennis10.2.png?v=1717511694"]},{id:26,title:"T-shirt Casablanca Blanc Tennis : Afro Cubisme (Bleu)",price:"109.90",compare:"230.00",images:["https://cdn.shopify.com/s/files/1/0757/4156/1098/files/tennis6.1.png?v=1717511734","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/tennis6.2.png?v=1717511734","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/tennis6.3.png?v=1717511734","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/tennis6.4.png?v=1717511735"]},{id:27,title:"T-Shirt Casablanca Blanc : Vue de l'Arche",price:"119.90",compare:"250.00",images:["https://cdn.shopify.com/s/files/1/0757/4156/1098/files/blanc10.1.png?v=1717511844","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/blanc10.2.png?v=1717511844"]},{id:28,title:"T-shirt Casablanca Bleu Tennis : Afro Cubisme (Gris)",price:"109.90",compare:"230.00",images:["https://cdn.shopify.com/s/files/1/0757/4156/1098/files/tennis7.1.png?v=1717511723","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/tennis7.2.png?v=1717511723","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/tennis7.3.png?v=1717511723"]},{id:29,title:"T-Shirt Casablanca Blanc : Triomphe d'Orange",price:"119.90",compare:"250.00",images:["https://cdn.shopify.com/s/files/1/0757/4156/1098/files/blanc8.1.png?v=1717511890","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/blanc8.2.png?v=1717511890","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/blanc8.3.png?v=1717511890","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/blanc8.4.png?v=1717511890"]},{id:30,title:"T-Shirt Casablanca Blanc : Studio de Musique",price:"119.90",compare:"250.00",images:["https://cdn.shopify.com/s/files/1/0757/4156/1098/files/blanc9.1.png?v=1717511869","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/blanc9.2.png?v=1717511869"]},{id:31,title:"T-Shirt Casablanca Blanc : L'arc de Jour",price:"99.90",compare:"250.00",images:["https://cdn.shopify.com/s/files/1/0757/4156/1098/files/blanc3.1.png?v=1717511981","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/blanc3.2.png?v=1717511981","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/blanc3.3.png?v=1717511981","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/blanc3.4.png?v=1717511981"]},{id:32,title:"T-shirt Casablanca Blanc : Dégradé",price:"119.90",compare:"250.00",images:["https://cdn.shopify.com/s/files/1/0757/4156/1098/files/blanc4.1.png?v=1717511959","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/blanc4.2.png?v=1717511959","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/blanc4.3.png?v=1717511959","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/blanc4.4.png?v=1717511959"]},{id:33,title:"T-Shirt Casablanca Blanc : L'arc Coloré",price:"89.90",compare:"250.00",images:["https://cdn.shopify.com/s/files/1/0757/4156/1098/files/Blanc1.1.png?v=1717512040","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/Blanc1.2.png?v=1717512040","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/Blanc1.3.png?v=1717512040","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/Blanc1.4.png?v=1717512040"]},{id:34,title:"T-shirt Casablanca Noir : La Flamme du Sport",price:"119.90",compare:"250.00",images:["https://cdn.shopify.com/s/files/1/0757/4156/1098/files/noir12.1.png?v=1717511827","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/noir12.2.png?v=1717511827"]},{id:35,title:"T-shirt Casablanca Blanc : La Flamme du Sport",price:"119.90",compare:"250.00",images:["https://cdn.shopify.com/s/files/1/0757/4156/1098/files/blanc11.1.png?v=1717511837","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/blanc11.2.png?v=1717511837","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/blanc11.3.png?v=1717511837"]},{id:36,title:"T-shirt Casablanca Noir : Avenue",price:"79.90",compare:"250.00",images:["https://cdn.shopify.com/s/files/1/0757/4156/1098/files/noir5.1.png?v=1717511940","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/noir5.2.png?v=1717511940","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/noir5.3.png?v=1717511940","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/noir5.4.png?v=1717511940"]},{id:37,title:"T-shirt Casablanca Blanc : Vue de Damas",price:"119.90",compare:"250.00",images:["https://cdn.shopify.com/s/files/1/0757/4156/1098/files/blanc5.1.png?v=1717511948","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/blanc5.2.png?v=1717511948","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/blanc5.3.png?v=1717511948"]},{id:38,title:"T-shirt Casablanca Blanc Tennis : Maison de Rêve",price:"109.90",compare:"230.00",images:["https://cdn.shopify.com/s/files/1/0757/4156/1098/files/tennis1.1.png?v=1717511790","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/tennis1.2.png?v=1717511790","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/tennis1.3.png?v=1717511790"]},{id:39,title:"T-shirt Casablanca Blanc : Vibrations Mentales",price:"119.90",compare:"250.00",images:["https://cdn.shopify.com/s/files/1/0757/4156/1098/files/blanc13.1.png?v=1717511802","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/blanc13.2.png?v=1717511802","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/blanc13.3.png?v=1717511802","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/blanc13.4.png?v=1717511802"]},{id:40,title:"T-shirt Casablanca Blanc : Le Jeu Coloré",price:"119.90",compare:"250.00",images:["https://cdn.shopify.com/s/files/1/0757/4156/1098/files/blanc7.1.png?v=1717511907","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/blanc7.2.png?v=1717511907"]},{id:41,title:"T-shirt Casablanca Rouge : Souvenir",price:"119.90",compare:"250.00",images:["https://cdn.shopify.com/s/files/1/0757/4156/1098/files/rouge1.1.png?v=1717511820","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/rouge1.2.png?v=1717511820"]},{id:42,title:"T-shirt Casablanca Blanc : Avenue",price:"89.90",compare:"250.00",images:["https://cdn.shopify.com/s/files/1/0757/4156/1098/files/blanc6.1.png?v=1717511929","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/blanc6.2.png?v=1717511929","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/blanc6.3.png?v=1717511929","https://cdn.shopify.com/s/files/1/0757/4156/1098/files/blanc6.4.png?v=1717511929"]},
+{id:43,cat:'chemise',title:"Gradient Tennis Tile Silk Shirt",price:"139.90",compare:"350.00",images:["https://cdn.shopify.com/s/files/1/0076/1341/5506/files/M-SS26-SH-003-06_01_5719674a-b590-4937-9ec6-add3a4d47389.webp","https://cdn.shopify.com/s/files/1/0076/1341/5506/files/M-SS26-SH-003-06_03_eca97d34-d1d8-4e8c-9b55-84c88a0f2db7.webp","https://cdn.shopify.com/s/files/1/0076/1341/5506/files/M-SS26-SH-003-06_04_bbf36d03-1574-483d-8f79-42379986475a.webp"]},
+{id:44,cat:'chemise',title:"Navy Monogram Shirt",price:"119.90",compare:"299.00",images:["https://cdn.shopify.com/s/files/1/0076/1341/5506/files/M-SS26-SH-277-01_01.webp","https://cdn.shopify.com/s/files/1/0076/1341/5506/files/M-SS26-SH-277-01_03.webp","https://cdn.shopify.com/s/files/1/0076/1341/5506/files/M-SS26-SH-277-01_04.webp"]},
+{id:45,cat:'chemise',title:"Art Of The Serve Fil Coupé Shirt",price:"139.90",compare:"350.00",images:["https://cdn.shopify.com/s/files/1/0076/1341/5506/files/M-SS26-SH-252-01_01.webp","https://cdn.shopify.com/s/files/1/0076/1341/5506/files/M-SS26-SH-252-01_03.webp","https://cdn.shopify.com/s/files/1/0076/1341/5506/files/M-SS26-SH-252-01_04.webp"]},
+{id:46,cat:'chemise',title:"White Towelling Monogram Shirt",price:"119.90",compare:"299.00",images:["https://cdn.shopify.com/s/files/1/0076/1341/5506/files/M-SS26-SH-085-01_01_63cc557c-639e-4bd8-9bb7-6f3b17d48f38.webp","https://cdn.shopify.com/s/files/1/0076/1341/5506/files/M-SS26-SH-085-01_03_778ee690-a53d-4684-bbf2-ff4747ac85d2.webp","https://cdn.shopify.com/s/files/1/0076/1341/5506/files/M-SS26-SH-085-01_04_e5daa4b6-201f-4425-ae71-a2a08b44aff5.webp"]},
+{id:47,cat:'chemise',title:"Better Days Long Sleeve Silk Shirt",price:"149.90",compare:"399.00",images:["https://cdn.shopify.com/s/files/1/0076/1341/5506/files/M-SS26-SH-006-02_01.webp","https://cdn.shopify.com/s/files/1/0076/1341/5506/files/M-SS26-SH-006-02_03.webp","https://cdn.shopify.com/s/files/1/0076/1341/5506/files/M-SS26-SH-006-02_04.webp"]},
+{id:48,cat:'chemise',title:"Tennis Landscape Silk Shirt",price:"139.90",compare:"350.00",images:["https://cdn.shopify.com/s/files/1/0076/1341/5506/files/M-SS26-SH-003-04_01.webp","https://cdn.shopify.com/s/files/1/0076/1341/5506/files/M-SS26-SH-003-04_03.webp","https://cdn.shopify.com/s/files/1/0076/1341/5506/files/M-SS26-SH-003-04_04.webp"]},
+{id:49,cat:'short',title:"Tennis Crochet Short",price:"89.90",compare:"199.00",images:["https://cdn.shopify.com/s/files/1/0076/1341/5506/files/MF24-KW-934-01-EX-CE_01.webp","https://cdn.shopify.com/s/files/1/0076/1341/5506/files/MF24-KW-934-01-EX-CE_03.webp","https://cdn.shopify.com/s/files/1/0076/1341/5506/files/MF24-KW-934-01-EX-CE_04.webp"]},
+{id:50,cat:'short',title:"Gothic Crochet Short",price:"89.90",compare:"199.00",images:["https://cdn.shopify.com/s/files/1/0076/1341/5506/files/MS25-KW-1064-02-EX-CE-01.webp","https://cdn.shopify.com/s/files/1/0076/1341/5506/files/MS25-KW-1064-02-EX-CE_03.webp","https://cdn.shopify.com/s/files/1/0076/1341/5506/files/MS25-KW-1064-02-EX-CE_04.webp"]},
+{id:51,cat:'short',title:"Gothic Logo Sweatshort",price:"79.90",compare:"179.00",images:["https://cdn.shopify.com/s/files/1/0076/1341/5506/files/MS25-JTR-003-02_01.webp","https://cdn.shopify.com/s/files/1/0076/1341/5506/files/MS25-JTR-003-02_03_5de8c277-52bf-4686-9351-e99e593df4a7.webp","https://cdn.shopify.com/s/files/1/0076/1341/5506/files/MS25-JTR-003-02_04_dec5b5ab-e57a-45ba-9e85-f0f1caa27ad2.webp"]},
+{id:52,cat:'short',title:"L'Arche Sweatshort",price:"79.90",compare:"179.00",images:["https://cdn.shopify.com/s/files/1/0076/1341/5506/files/MPF25-JTR-003-07-EX-CE_01.webp","https://cdn.shopify.com/s/files/1/0076/1341/5506/files/MPF25-JTR-003-07-EX-CE_03.webp","https://cdn.shopify.com/s/files/1/0076/1341/5506/files/MPF25-JTR-003-07-EX-CE_04.webp"]},
+{id:53,cat:'short',title:"Tennis Cotton Crochet Short",price:"89.90",compare:"199.00",images:["https://cdn.shopify.com/s/files/1/0076/1341/5506/files/M-SP26-KW-1383-01-EX-FL_01.webp","https://cdn.shopify.com/s/files/1/0076/1341/5506/files/M-SP26-KW-1383-01-EX-FL_03.webp","https://cdn.shopify.com/s/files/1/0076/1341/5506/files/M-SP26-KW-1383-01-EX-FL_04.webp"]},
+{id:54,cat:'short',title:"Cotton Chevron Crochet Short",price:"79.90",compare:"179.00",images:["https://cdn.shopify.com/s/files/1/0076/1341/5506/files/MPF25-KW-1010-01_01.webp","https://cdn.shopify.com/s/files/1/0076/1341/5506/files/MPF25-KW-1010-01_03.webp","https://cdn.shopify.com/s/files/1/0076/1341/5506/files/MPF25-KW-1010-01_04.webp"]}
+];
+
+const SIZES=['XS','S','M','L','XL','XXL'];
+let cart=JSON.parse(localStorage.getItem('co_cart')||'[]');
+let currentModal=null,currentQuick=null,modalSelectedSize=null,quickSelectedSize=null;
+
+function fmt(n){return parseFloat(n).toLocaleString('fr-FR',{minimumFractionDigits:2,maximumFractionDigits:2})+' €'}
+function pct(p,c){return Math.round((1-parseFloat(p)/parseFloat(c))*100)}
+function saveCart(){localStorage.setItem('co_cart',JSON.stringify(cart))}
+function showToast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2800)}
+
+function renderGrid(){
+  const grid=document.getElementById('productGrid');
+  grid.innerHTML='';
+  PRODUCTS.forEach(p=>{
+    const off=pct(p.price,p.compare);
+    const has2=p.images.length>1;
+    const shortTitle=p.title.replace(/^T-[Ss]hirt Casablanca /,'');
+    const card=document.createElement('div');
+    card.className='product-card';
+    card.dataset.id=p.id;
+    card.dataset.title=p.title.toLowerCase();
+    card.dataset.cat=p.cat||'tshirt';
+    card.innerHTML=`<div class="product-img-wrap"><img class="img-main" src="${p.images[0]}" alt="${p.title}" loading="lazy">${has2?`<img class="img-hover" src="${p.images[1]}" alt="${p.title}" loading="lazy">`:''}
+      <span class="product-badge">-${off}%</span>
+      <button class="quick-btn" onclick="openQuick(event,${p.id})">Choisir la taille</button>
+    </div>
+    <div class="product-info">
+      <div class="product-name">${shortTitle}</div>
+      <div class="product-pricing">
+        <span class="price-current">${fmt(p.price)}</span>
+        <span class="price-compare">${fmt(p.compare)}</span>
+        <span class="price-off">-${off}%</span>
+      </div>
+    </div>`;
+    card.addEventListener('click',e=>{if(!e.target.closest('.quick-btn'))openModal(p.id)});
+    grid.appendChild(card);
+  });
+}
+
+function filterProducts(key,btn){
+  const catFilters={Chemise:'chemise',Short:'short'};
+  const cards=document.querySelectorAll('.product-card');
+  let count=0;
+  cards.forEach(c=>{
+    let show;
+    if(key==='all') show=true;
+    else if(catFilters[key]) show=c.dataset.cat===catFilters[key];
+    else show=c.dataset.title.includes(key.toLowerCase());
+    c.style.display=show?'':'none';
+    if(show)count++;
+  });
+  const labels={'all':'Tous les modèles','Blanc':'T-Shirts Blanc','Noir':'T-Shirts Noir','Rose':'T-Shirts Rose','Tennis':'Tennis Club','Vert':'T-Shirts Vert','Bleu':'T-Shirts Bleu','Rouge':'T-Shirts Rouge','Chemise':'Chemises','Short':'Shorts'};
+  document.getElementById('filterCount').textContent=count+' article'+(count>1?'s':'')+' · '+(labels[key]||key);
+  document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
+  if(btn)btn.classList.add('active');
+}
+
+function openModal(id){
+  const p=PRODUCTS.find(x=>x.id===id);if(!p)return;
+  currentModal=p;modalSelectedSize=null;
+  const shortTitle=p.title.replace(/^T-[Ss]hirt Casablanca /,'');
+  document.getElementById('modalTitle').textContent=shortTitle;
+  document.getElementById('modalPrice').textContent=fmt(p.price);
+  document.getElementById('modalCompare').textContent=fmt(p.compare);
+  document.getElementById('modalSaving').textContent=`-${pct(p.price,p.compare)}%`;
+  const mainImg=document.getElementById('modalMainImg');
+  mainImg.src=p.images[0];mainImg.alt=p.title;
+  const thumbs=document.getElementById('modalThumbs');thumbs.innerHTML='';
+  p.images.forEach((img,i)=>{
+    const t=document.createElement('img');
+    t.src=img;t.alt=p.title;t.className='modal-thumb'+(i===0?' active':'');
+    t.onclick=()=>{mainImg.src=img;thumbs.querySelectorAll('.modal-thumb').forEach(x=>x.classList.remove('active'));t.classList.add('active')};
+    thumbs.appendChild(t);
+  });
+  const sg=document.getElementById('modalSizeGrid');sg.innerHTML='';
+  SIZES.forEach(s=>{
+    const b=document.createElement('div');b.className='size-opt';b.textContent=s;
+    b.onclick=()=>{sg.querySelectorAll('.size-opt').forEach(x=>x.classList.remove('selected'));b.classList.add('selected');modalSelectedSize=s;
+      const addBtn=document.getElementById('modalAddBtn');addBtn.disabled=false;addBtn.textContent='Ajouter au panier'};
+    sg.appendChild(b);
+  });
+  const addBtn=document.getElementById('modalAddBtn');addBtn.disabled=true;addBtn.textContent='Choisir une taille d\'abord';
+  document.getElementById('modalOverlay').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeModal(e){if(e.target===e.currentTarget)closeModalBtn()}
+function closeModalBtn(){document.getElementById('modalOverlay').classList.remove('open');document.body.style.overflow=''}
+function addFromModal(){if(!modalSelectedSize||!currentModal)return;addToCart(currentModal,modalSelectedSize);closeModalBtn()}
+
+function openQuick(e,id){
+  e.stopPropagation();
+  const p=PRODUCTS.find(x=>x.id===id);if(!p)return;
+  currentQuick=p;quickSelectedSize=null;
+  const shortTitle=p.title.replace(/^T-[Ss]hirt Casablanca /,'');
+  document.getElementById('quickImg').src=p.images[0];
+  document.getElementById('quickName').textContent=shortTitle;
+  document.getElementById('quickPrice').textContent=fmt(p.price);
+  document.getElementById('quickCompare').textContent=fmt(p.compare);
+  const sg=document.getElementById('quickSizeGrid');sg.innerHTML='';
+  SIZES.forEach(s=>{
+    const b=document.createElement('div');b.className='quick-size-opt';b.textContent=s;
+    b.onclick=()=>{sg.querySelectorAll('.quick-size-opt').forEach(x=>x.classList.remove('selected'));b.classList.add('selected');quickSelectedSize=s;
+      const addBtn=document.getElementById('quickAddBtn');addBtn.disabled=false;addBtn.textContent='Ajouter au panier'};
+    sg.appendChild(b);
+  });
+  const addBtn=document.getElementById('quickAddBtn');addBtn.disabled=true;addBtn.textContent='Choisir une taille d\'abord';
+  document.getElementById('quickOverlay').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeQuick(e){if(e.target===e.currentTarget)closeQuickBtn()}
+function closeQuickBtn(){document.getElementById('quickOverlay').classList.remove('open');document.body.style.overflow=''}
+function addFromQuick(){if(!quickSelectedSize||!currentQuick)return;addToCart(currentQuick,quickSelectedSize);closeQuickBtn()}
+
+function addToCart(product,size){
+  const key=`${product.id}-${size}`;
+  const ex=cart.find(x=>x.key===key);
+  if(ex){ex.qty++}else{cart.push({key,id:product.id,title:product.title,price:product.price,size,qty:1,image:product.images[0]})}
+  saveCart();updateCartUI();showToast('Ajouté — Taille '+size);
+  setTimeout(()=>toggleCart(),350);
+}
+function removeFromCart(key){cart=cart.filter(x=>x.key!==key);saveCart();updateCartUI();renderCartBody()}
+function updateCartUI(){
+  const total=cart.reduce((s,x)=>s+x.qty,0);
+  const el=document.getElementById('cartCount');
+  el.textContent=total;el.classList.toggle('visible',total>0);
+}
+function renderCartBody(){
+  const body=document.getElementById('cartBody'),foot=document.getElementById('cartFoot');
+  if(!cart.length){
+    body.innerHTML='<div class="cart-empty"><p>Votre panier est vide</p><a href="#collection" class="btn-primary" style="text-decoration:none" onclick="toggleCart()">Voir la collection</a></div>';
+    foot.style.display='none';return;
+  }
+  foot.style.display='block';body.innerHTML='';
+  cart.forEach(item=>{
+    const el=document.createElement('div');el.className='cart-item';
+    const shortTitle=item.title.replace(/^T-[Ss]hirt Casablanca /,'');
+    el.innerHTML=`<img src="${item.image}" alt="${item.title}"><div><div class="cart-item-name">${shortTitle}</div><div class="cart-item-size">Taille : ${item.size}</div><div class="cart-item-price">${fmt(parseFloat(item.price)*item.qty)}</div><button class="cart-remove" onclick="removeFromCart('${item.key}')">Supprimer</button></div><div style="font-size:.75rem;color:var(--ink3);padding-top:4px">×${item.qty}</div>`;
+    body.appendChild(el);
+  });
+  const sub=cart.reduce((s,x)=>s+parseFloat(x.price)*x.qty,0);
+  document.getElementById('cartTotal').textContent=fmt(sub);
+  const bar=document.getElementById('freeShipBar');
+  if(sub>=150){bar.innerHTML='<strong style="color:var(--gold)">✓ Livraison offerte !</strong>'}
+  else{const left=fmt(150-sub);const p2=Math.min(100,(sub/150)*100);bar.innerHTML=`Plus que ${left} pour la livraison offerte<div class="ship-progress"><div class="ship-fill" style="width:${p2}%"></div></div>`}
+}
+function toggleCart(){
+  const ov=document.getElementById('cartOverlay');
+  ov.classList.toggle('open');
+  if(ov.classList.contains('open')){renderCartBody();document.body.style.overflow='hidden'}
+  else{document.body.style.overflow=''}
+}
+function closeCartOverlay(e){if(e.target===e.currentTarget)toggleCart()}
+function toggleMobileMenu(){document.getElementById('mobileMenu').classList.toggle('open')}
+function submitNewsletter(e){e.preventDefault();showToast('Merci ! Votre code -10% arrive par email.');e.target.reset()}
+function closePopup(){document.getElementById('popupOverlay').classList.remove('open');sessionStorage.setItem('co_popup','1')}
+function submitPopup(e){e.preventDefault();showToast('Code CASA10 — -10% sur votre commande !');closePopup()}
+
+window.addEventListener('scroll',()=>{
+  document.getElementById('mainNav').classList.toggle('scrolled',window.scrollY>60);
+  document.getElementById('scrollTop').classList.toggle('visible',window.scrollY>400);
+});
+window.addEventListener('keydown',e=>{if(e.key==='Escape'){closeModalBtn();closeQuickBtn();if(document.getElementById('cartOverlay').classList.contains('open'))toggleCart()}});
+
+setTimeout(()=>{if(!sessionStorage.getItem('co_popup'))document.getElementById('popupOverlay').classList.add('open')},4000);
+
+renderGrid();
+updateCartUI();
+</script>
+</body>
+</html>
