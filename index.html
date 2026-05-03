@@ -770,33 +770,56 @@ function closeLegal(e){if(e.target===e.currentTarget)closeLegalBtn()}
 function closeLegalBtn(){document.getElementById('legalOverlay').classList.remove('open');document.body.style.overflow=''}
 
 const FAQ=[
-  {q:"Les articles sont-ils authentiques ?",a:"Oui, 100%. Tous nos articles sont des pieces Casablanca Paris originales, invendus de saison et fins de serie. Chaque article est accompagne de ses etiquettes d'origine."},
-  {q:"Pourquoi les prix sont-ils aussi bas ?",a:"Nous travaillons directement avec des distributeurs officiels sur des lots d'invendus de saison. Pas d'intermediaire = des prix outlet jusqu'a -55%."},
-  {q:"Quels sont les delais de livraison ?",a:"Les commandes sont expediees sous 24h ouvrees. Comptez 2 a 4 jours ouvres pour la France metropolitaine. Livraison offerte des 150 EUR d'achat."},
-  {q:"Comment fonctionne le retour ?",a:"Vous avez 30 jours pour retourner un article. Les retours sont gratuits. Contactez-nous a contact@casa-outlet.fr et nous vous envoyons une etiquette prepayee."},
-  {q:"Quelle taille choisir ?",a:"Les t-shirts Casablanca ont une coupe legerement oversize. Si vous etes entre deux tailles, prenez la taille en dessous pour un fit classique, ou au-dessus pour un fit loose."},
-  {q:"Puis-je modifier ou annuler ma commande ?",a:"Vous pouvez modifier ou annuler votre commande dans les 2 heures suivant la validation. Apres expedition, il faudra passer par notre politique de retour."},
+  {q:"Les articles sont-ils authentiques ?",a:"Oui, 100% garantis. Tous nos articles sont des pièces Casablanca Paris originales — invendus de saison et fins de série avec étiquettes d’origine. Nous ne vendons aucune contrefacon."},
+  {q:"Pourquoi les prix sont-ils aussi bas ?",a:"Nous travaillons directement avec des distributeurs officiels sur des lots d’invendus. Pas d’intermédiaire inutile = des prix outlet jusqu’à -55% du prix officiel."},
+  {q:"Quels sont les délais de livraison ?",a:"Les commandes sont expédiées sous 24h ouvrées. Comptez 2 à 4 jours ouvrés pour la France métropolitaine. La livraison est offerte dès 150€ d’achat."},
+  {q:"Comment fonctionne le retour ?",a:"Vous avez 30 jours pour retourner un article dans son état d’origine. Les retours sont gratuits. Écrivez-nous à contact@casa-outlet.fr et nous vous envoyons une étiquette prépayée."},
+  {q:"Quelle taille choisir ?",a:"Les t-shirts Casablanca ont une coupe légèrement oversize. Si vous êtes entre deux tailles, prenez la taille en dessous pour un fit classique, ou au-dessus pour un fit loose. Consultez le guide des tailles dans le footer."},
+  {q:"Puis-je annuler ou modifier ma commande ?",a:"Oui, vous pouvez annuler ou modifier votre commande dans les 2 heures suivant la validation, en nous contactant à contact@casa-outlet.fr. Passé ce délai, si la commande est déjà préparée, il faudra faire un retour gratuit à réception."},
 ];
 
 function renderFAQ(){
   const list=document.getElementById('faqList');
-  FAQ.forEach((item,i)=>{
+  FAQ.forEach(function(item){
     const el=document.createElement('div');
     el.style.cssText='border-top:1px solid var(--border);overflow:hidden';
-    el.innerHTML=`<button type="button" onclick="toggleFAQ(event,this)" style="width:100%;text-align:left;padding:20px 0;display:flex;justify-content:space-between;align-items:center;background:none;border:none;cursor:pointer;font-family:inherit"><span style="font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:500;color:var(--ink);padding-right:24px">${item.q}</span><span class="faq-icon" style="font-size:1.2rem;color:var(--gold);flex-shrink:0;transition:transform .3s">+</span></button><div class="faq-body" style="max-height:0;overflow:hidden;transition:max-height .4s ease"><p style="padding:0 0 20px;font-size:.83rem;color:var(--ink3);line-height:1.75">${item.a}</p></div>`;
+
+    const btn=document.createElement('button');
+    btn.type='button';
+    btn.style.cssText='width:100%;text-align:left;padding:20px 0;display:flex;justify-content:space-between;align-items:center;background:none;border:none;cursor:pointer;font-family:inherit';
+    const spanQ=document.createElement('span');
+    spanQ.style.cssText='font-family:"Cormorant Garamond",serif;font-size:1.05rem;font-weight:500;color:var(--ink);padding-right:24px;flex:1';
+    spanQ.textContent=item.q;
+    const spanI=document.createElement('span');
+    spanI.className='faq-icon';
+    spanI.style.cssText='font-size:1.3rem;color:var(--gold);flex-shrink:0;line-height:1';
+    spanI.textContent='+';
+    btn.appendChild(spanQ);
+    btn.appendChild(spanI);
+
+    const body=document.createElement('div');
+    body.style.cssText='max-height:0;overflow:hidden;transition:max-height .4s ease';
+    const p=document.createElement('p');
+    p.style.cssText='padding:0 0 20px;font-size:.83rem;color:var(--ink3);line-height:1.8';
+    p.textContent=item.a;
+    body.appendChild(p);
+
+    btn.addEventListener('click',function(e){
+      e.stopPropagation();
+      const isOpen=body.style.maxHeight!=='0px'&&body.style.maxHeight!=='';
+      document.querySelectorAll('#faqList .faq-body-ref').forEach(function(b){b.style.maxHeight='0px'});
+      document.querySelectorAll('#faqList .faq-icon').forEach(function(ic){ic.textContent='+'});
+      if(!isOpen){body.style.maxHeight=body.scrollHeight+'px';spanI.textContent='−';}
+    });
+
+    body.className='faq-body-ref';
+    el.appendChild(btn);
+    el.appendChild(body);
     list.appendChild(el);
   });
-  const last=document.createElement('div');last.style.borderTop='1px solid var(--border)';
+  const last=document.createElement('div');
+  last.style.borderTop='1px solid var(--border)';
   list.appendChild(last);
-}
-function toggleFAQ(e,btn){
-  e.stopPropagation();e.preventDefault();
-  const body=btn.nextElementSibling;
-  const icon=btn.querySelector('.faq-icon');
-  const isOpen=body.style.maxHeight&&body.style.maxHeight!=='0px';
-  document.querySelectorAll('.faq-body').forEach(b=>b.style.maxHeight='0px');
-  document.querySelectorAll('.faq-icon').forEach(ic=>{ic.textContent='+';ic.style.transform='rotate(0deg)'});
-  if(!isOpen){body.style.maxHeight=body.scrollHeight+'px';icon.textContent='−';}
 }
 
 window.addEventListener('scroll',()=>{
