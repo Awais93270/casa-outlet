@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17179829801"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-17179829801');
+</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Casa Outlet — Casablanca Paris | Jusqu'à -55%</title>
@@ -669,7 +677,7 @@ footer{background:var(--cream2);border-top:1px solid var(--border);padding:48px 
         <span>Sous-total</span>
         <strong id="cartTotal">0,00 €</strong>
       </div>
-      <button class="cart-checkout" onclick="showToast('Redirection vers le paiement...')">Passer la commande →</button>
+      <button class="cart-checkout" onclick="showToast('Redirection vers le paiement...');gtag('event','conversion',{'send_to':'AW-17179829801/1H_eCNXskNcaEKnM_f8_','transaction_id':''})">Passer la commande →</button>
     </div>
   </div>
 </div>
