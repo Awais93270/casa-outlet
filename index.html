@@ -399,6 +399,7 @@ footer{background:var(--ink);color:var(--cream);border-top:1px solid rgba(255,25
     <li><a href="#collection" onclick="filterProducts('Tennis',null);toggleMobileMenu();document.getElementById('collection').scrollIntoView({behavior:'smooth'})">Tennis Club</a></li>
     <li><a href="#collection" onclick="filterProducts('Chemise',null);toggleMobileMenu();document.getElementById('collection').scrollIntoView({behavior:'smooth'})">Chemises</a></li>
     <li><a href="#collection" onclick="filterProducts('Short',null);toggleMobileMenu();document.getElementById('collection').scrollIntoView({behavior:'smooth'})">Shorts</a></li>
+    <li><a href="#collection" onclick="filterProducts('polo',null);toggleMobileMenu();document.getElementById('collection').scrollIntoView({behavior:'smooth'})">Polos</a></li>
   </ul>
   <div class="mobile-menu-sep"></div>
   <div class="mobile-menu-links">
@@ -433,7 +434,7 @@ footer{background:var(--ink);color:var(--cream);border-top:1px solid rgba(255,25
 
 <!-- STATS -->
 <div class="stats-strip">
-  <div class="stat-item"><div class="stat-num">55</div><div class="stat-label">Modèles disponibles</div></div>
+  <div class="stat-item"><div class="stat-num">71</div><div class="stat-label">Modèles disponibles</div></div>
   <div class="stat-item"><div class="stat-num">-80%</div><div class="stat-label">Remise maximale</div></div>
   <div class="stat-item"><div class="stat-num">24h</div><div class="stat-label">Expédition</div></div>
   <div class="stat-item"><div class="stat-num">+214</div><div class="stat-label">Avis clients 4.8★</div></div>
@@ -448,7 +449,8 @@ footer{background:var(--ink);color:var(--cream);border-top:1px solid rgba(255,25
     <button class="filter-btn" onclick="filterProducts('Tennis',this)">Tennis Club</button>
     <button class="filter-btn" onclick="filterProducts('Chemise',this)">Chemises</button>
     <button class="filter-btn" onclick="filterProducts('Short',this)">Shorts</button>
-    <span class="filter-count" id="filterCount">55 pièces · Tous les modèles</span>
+    <button class="filter-btn" onclick="filterProducts('polo',this)">Polos</button>
+    <span class="filter-count" id="filterCount">71 pièces · Tous les modèles</span>
   </div>
   <div class="collection-label">Collection Casablanca Paris — Outlet 2025 · Pièces neuves étiquetées</div>
   <div class="product-grid" id="productGrid"></div>
@@ -779,7 +781,28 @@ const PRODUCTS=[{id:0,title:"T-shirt Casablanca Blanc Tennis : Aigle Ludique",pr
 {id:51,cat:'short',title:"Gothic Logo Sweatshort",price:"44.90",compare:"179.00",images:["https://cdn.shopify.com/s/files/1/0076/1341/5506/files/MS25-JTR-003-02_01.webp","https://cdn.shopify.com/s/files/1/0076/1341/5506/files/MS25-JTR-003-02_03_5de8c277-52bf-4686-9351-e99e593df4a7.webp","https://cdn.shopify.com/s/files/1/0076/1341/5506/files/MS25-JTR-003-02_04_dec5b5ab-e57a-45ba-9e85-f0f1caa27ad2.webp"]},
 {id:52,cat:'short',title:"L'Arche Sweatshort",price:"44.90",compare:"179.00",images:["https://cdn.shopify.com/s/files/1/0076/1341/5506/files/MPF25-JTR-003-07-EX-CE_01.webp","https://cdn.shopify.com/s/files/1/0076/1341/5506/files/MPF25-JTR-003-07-EX-CE_03.webp","https://cdn.shopify.com/s/files/1/0076/1341/5506/files/MPF25-JTR-003-07-EX-CE_04.webp"]},
 {id:53,cat:'short',title:"Tennis Cotton Crochet Short",price:"49.90",compare:"199.00",images:["https://cdn.shopify.com/s/files/1/0076/1341/5506/files/M-SP26-KW-1383-01-EX-FL_01.webp","https://cdn.shopify.com/s/files/1/0076/1341/5506/files/M-SP26-KW-1383-01-EX-FL_03.webp","https://cdn.shopify.com/s/files/1/0076/1341/5506/files/M-SP26-KW-1383-01-EX-FL_04.webp"]},
-{id:54,cat:'short',title:"Cotton Chevron Crochet Short",price:"44.90",compare:"179.00",images:["https://cdn.shopify.com/s/files/1/0076/1341/5506/files/MPF25-KW-1010-01_01.webp","https://cdn.shopify.com/s/files/1/0076/1341/5506/files/MPF25-KW-1010-01_03.webp","https://cdn.shopify.com/s/files/1/0076/1341/5506/files/MPF25-KW-1010-01_04.webp"]}
+{id:54,cat:'short',title:"Cotton Chevron Crochet Short",price:"44.90",compare:"179.00",images:["https://cdn.shopify.com/s/files/1/0076/1341/5506/files/MPF25-KW-1010-01_01.webp","https://cdn.shopify.com/s/files/1/0076/1341/5506/files/MPF25-KW-1010-01_03.webp","https://cdn.shopify.com/s/files/1/0076/1341/5506/files/MPF25-KW-1010-01_04.webp"]},
+/* ── Nouveaux T-Shirts SS26 ── */
+{id:55,cat:'tshirt',title:"Appliqué Monogram T-Shirt",price:"34.90",compare:"175.00",images:["https://cdn.shopify.com/s/files/1/0076/1341/5506/files/M-SP26-TS-220-01-EX-CE_01.webp","https://cdn.shopify.com/s/files/1/0076/1341/5506/files/M-SP26-TS-220-01-EX-CE_03.webp","https://cdn.shopify.com/s/files/1/0076/1341/5506/files/M-SP26-TS-220-01-EX-CE_04.webp"]},
+{id:56,cat:'tshirt',title:"Crystal Logo T-Shirt",price:"34.90",compare:"175.00",images:["https://cdn.shopify.com/s/files/1/0076/1341/5506/files/M-SP26-TS-221-02-EX-CE_01.webp","https://cdn.shopify.com/s/files/1/0076/1341/5506/files/M-SP26-TS-221-02-EX-CE_03.webp","https://cdn.shopify.com/s/files/1/0076/1341/5506/files/M-SP26-TS-221-02-EX-CE_04.webp"]},
+{id:57,cat:'tshirt',title:"Halftone Logo T-Shirt",price:"29.90",compare:"145.00",images:["https://cdn.shopify.com/s/files/1/0076/1341/5506/files/M-SP26-TS-217-01-EX-CE_01.webp","https://cdn.shopify.com/s/files/1/0076/1341/5506/files/M-SP26-TS-217-01-EX-CE_03.webp","https://cdn.shopify.com/s/files/1/0076/1341/5506/files/M-SP26-TS-217-01-EX-CE_04.webp"]},
+/* ── Nouvelles Chemises SS26 ── */
+{id:58,cat:'chemise',title:"Shockwave Silk Shirt",price:"79.90",compare:"395.00",images:["https://cdn.shopify.com/s/files/1/0076/1341/5506/files/M-SP26-SH-290-01-EX-CE_01.webp","https://cdn.shopify.com/s/files/1/0076/1341/5506/files/M-SP26-SH-290-01-EX-CE_03.webp","https://cdn.shopify.com/s/files/1/0076/1341/5506/files/M-SP26-SH-290-01-EX-CE_04.webp"]},
+{id:59,cat:'chemise',title:"Jacquard Pattern Shirt",price:"69.90",compare:"325.00",images:["https://cdn.shopify.com/s/files/1/0076/1341/5506/files/M-SP26-SH-288-01-EX-CE_01.webp","https://cdn.shopify.com/s/files/1/0076/1341/5506/files/M-SP26-SH-288-01-EX-CE_03.webp","https://cdn.shopify.com/s/files/1/0076/1341/5506/files/M-SP26-SH-288-01-EX-CE_04.webp"]},
+{id:60,cat:'chemise',title:"Kawaii Silk Shirt",price:"79.90",compare:"395.00",images:["https://cdn.shopify.com/s/files/1/0076/1341/5506/files/M-SP26-SH-283-01-EX-CE_01.webp","https://cdn.shopify.com/s/files/1/0076/1341/5506/files/M-SP26-SH-283-01-EX-CE_03.webp","https://cdn.shopify.com/s/files/1/0076/1341/5506/files/M-SP26-SH-283-01-EX-CE_04.webp"]},
+{id:61,cat:'chemise',title:"Tennis Club Icon Shirt",price:"64.90",compare:"295.00",images:["https://cdn.shopify.com/s/files/1/0076/1341/5506/files/M-SP26-SH-286-01-EX-CE_01.webp","https://cdn.shopify.com/s/files/1/0076/1341/5506/files/M-SP26-SH-286-01-EX-CE_03.webp","https://cdn.shopify.com/s/files/1/0076/1341/5506/files/M-SP26-SH-286-01-EX-CE_04.webp"]},
+/* ── Nouveaux Shorts SS26 ── */
+{id:62,cat:'short',title:"Appliqué Monogram Short",price:"39.90",compare:"195.00",images:["https://cdn.shopify.com/s/files/1/0076/1341/5506/files/M-SP26-SHT-056-01-EX-CE_01.webp","https://cdn.shopify.com/s/files/1/0076/1341/5506/files/M-SP26-SHT-056-01-EX-CE_03.webp","https://cdn.shopify.com/s/files/1/0076/1341/5506/files/M-SP26-SHT-056-01-EX-CE_04.webp"]},
+{id:63,cat:'short',title:"Off-White Monogram Short",price:"39.90",compare:"195.00",images:["https://cdn.shopify.com/s/files/1/0076/1341/5506/files/M-SP26-SHT-057-02-EX-CE_01.webp","https://cdn.shopify.com/s/files/1/0076/1341/5506/files/M-SP26-SHT-057-02-EX-CE_03.webp","https://cdn.shopify.com/s/files/1/0076/1341/5506/files/M-SP26-SHT-057-02-EX-CE_04.webp"]},
+{id:64,cat:'short',title:"Jacquard Pattern Short",price:"44.90",compare:"215.00",images:["https://cdn.shopify.com/s/files/1/0076/1341/5506/files/M-SP26-SHT-058-01-EX-CE_01.webp","https://cdn.shopify.com/s/files/1/0076/1341/5506/files/M-SP26-SHT-058-01-EX-CE_03.webp","https://cdn.shopify.com/s/files/1/0076/1341/5506/files/M-SP26-SHT-058-01-EX-CE_04.webp"]},
+{id:65,cat:'short',title:"Football Dégradé Short",price:"44.90",compare:"215.00",images:["https://cdn.shopify.com/s/files/1/0076/1341/5506/files/M-SP26-SHT-060-01-EX-CE_01.webp","https://cdn.shopify.com/s/files/1/0076/1341/5506/files/M-SP26-SHT-060-01-EX-CE_03.webp","https://cdn.shopify.com/s/files/1/0076/1341/5506/files/M-SP26-SHT-060-01-EX-CE_04.webp"]},
+{id:66,cat:'short',title:"Kawaii Silk Short",price:"49.90",compare:"245.00",images:["https://cdn.shopify.com/s/files/1/0076/1341/5506/files/M-SP26-SHT-062-01-EX-CE_01.webp","https://cdn.shopify.com/s/files/1/0076/1341/5506/files/M-SP26-SHT-062-01-EX-CE_03.webp","https://cdn.shopify.com/s/files/1/0076/1341/5506/files/M-SP26-SHT-062-01-EX-CE_04.webp"]},
+{id:67,cat:'short',title:"Pointelle Knit Short",price:"44.90",compare:"215.00",images:["https://cdn.shopify.com/s/files/1/0076/1341/5506/files/M-SP26-SHT-063-01-EX-CE_01.webp","https://cdn.shopify.com/s/files/1/0076/1341/5506/files/M-SP26-SHT-063-01-EX-CE_03.webp","https://cdn.shopify.com/s/files/1/0076/1341/5506/files/M-SP26-SHT-063-01-EX-CE_04.webp"]},
+/* ── Polos SS26 ── */
+{id:68,cat:'polo',title:"Pointelle Monogram Polo",price:"54.90",compare:"265.00",images:["https://cdn.shopify.com/s/files/1/0076/1341/5506/files/M-SP26-PL-015-01-EX-CE_01.webp","https://cdn.shopify.com/s/files/1/0076/1341/5506/files/M-SP26-PL-015-01-EX-CE_03.webp","https://cdn.shopify.com/s/files/1/0076/1341/5506/files/M-SP26-PL-015-01-EX-CE_04.webp"]},
+{id:69,cat:'polo',title:"Vertical Stripes Polo",price:"49.90",compare:"245.00",images:["https://cdn.shopify.com/s/files/1/0076/1341/5506/files/M-SP26-PL-016-01-EX-CE_01.webp","https://cdn.shopify.com/s/files/1/0076/1341/5506/files/M-SP26-PL-016-01-EX-CE_03.webp","https://cdn.shopify.com/s/files/1/0076/1341/5506/files/M-SP26-PL-016-01-EX-CE_04.webp"]},
+{id:70,cat:'polo',title:"Réversible Polo",price:"59.90",compare:"295.00",images:["https://cdn.shopify.com/s/files/1/0076/1341/5506/files/M-SP26-PL-017-01-EX-CE_01.webp","https://cdn.shopify.com/s/files/1/0076/1341/5506/files/M-SP26-PL-017-01-EX-CE_03.webp","https://cdn.shopify.com/s/files/1/0076/1341/5506/files/M-SP26-PL-017-01-EX-CE_04.webp"]},
+{id:71,cat:'polo',title:"Piqué Laurel Polo",price:"54.90",compare:"265.00",images:["https://cdn.shopify.com/s/files/1/0076/1341/5506/files/M-SP26-PL-018-01-EX-CE_01.webp","https://cdn.shopify.com/s/files/1/0076/1341/5506/files/M-SP26-PL-018-01-EX-CE_03.webp","https://cdn.shopify.com/s/files/1/0076/1341/5506/files/M-SP26-PL-018-01-EX-CE_04.webp"]}
 ];
 
 const SIZES=['XS','S','M','L','XL','XXL'];
@@ -821,7 +844,7 @@ function renderGrid(){
 }
 
 function filterProducts(key,btn){
-  const catFilters={Chemise:'chemise',Short:'short',tshirt:'tshirt'};
+  const catFilters={Chemise:'chemise',Short:'short',tshirt:'tshirt',polo:'polo'};
   const cards=document.querySelectorAll('.product-card');
   let count=0;
   cards.forEach(c=>{
@@ -832,7 +855,7 @@ function filterProducts(key,btn){
     c.style.display=show?'':'none';
     if(show)count++;
   });
-  const labels={'all':'Tous les modèles','Tennis':'Tennis Club','Chemise':'Chemises','Short':'Shorts','tshirt':'T-Shirts'};
+  const labels={'all':'Tous les modèles','Tennis':'Tennis Club','Chemise':'Chemises','Short':'Shorts','tshirt':'T-Shirts','polo':'Polos'};
   document.getElementById('filterCount').textContent=count+' article'+(count>1?'s':'')+' · '+(labels[key]||key);
   document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
   if(btn)btn.classList.add('active');
@@ -841,7 +864,8 @@ function filterProducts(key,btn){
 const PROD_DESCS={
   tshirt:'T-shirt Casablanca Paris en coton biologique premium. Imprimé signature de la maison, réalisé en sérigraphie haute définition. Coupe droite légèrement oversize, col rond renforcé. Pièce outlet — étiquettes d\'origine, état neuf.',
   chemise:'Chemise Casablanca Paris en soie de qualité supérieure. Coupe relaxed avec col cubain. Impression exclusive issue des archives de la maison. Pièce outlet — étiquettes d\'origine, état neuf.',
-  short:'Short Casablanca Paris en coton ou crochet premium. Taille élastique avec cordon de serrage. Poches latérales. Design tennis court signature. Pièce outlet — étiquettes d\'origine, état neuf.'
+  short:'Short Casablanca Paris en coton ou crochet premium. Taille élastique avec cordon de serrage. Poches latérales. Design tennis court signature. Pièce outlet — étiquettes d\'origine, état neuf.',
+  polo:'Polo Casablanca Paris en coton piqué ou jacquard de qualité supérieure. Col à deux boutons, coupe droite légèrement oversize. Broderie ou impression signature de la maison. Pièce outlet — étiquettes d\'origine, état neuf.'
 };
 function openModal(id){
   const p=PRODUCTS.find(x=>x.id===id);if(!p)return;
