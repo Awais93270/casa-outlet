@@ -151,6 +151,39 @@ nav.scrolled{box-shadow:0 2px 20px rgba(0,0,0,.08)}
 .modal-close{position:absolute;top:12px;right:12px;width:36px;height:36px;background:var(--ink);color:var(--cream);display:flex;align-items:center;justify-content:center;font-size:1rem;z-index:10;border-radius:50%;cursor:pointer;transition:background .2s}
 .modal-close:hover{background:var(--ink2)}
 
+/* TRACKING MODAL */
+.track-overlay{position:fixed;inset:0;background:rgba(10,10,10,.65);z-index:1200;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .3s;padding:20px}
+.track-overlay.open{opacity:1;pointer-events:auto}
+.track-modal{background:var(--white);width:100%;max-width:480px;padding:48px 40px 36px;position:relative;transform:translateY(24px);transition:transform .4s var(--spring);box-shadow:0 24px 60px rgba(0,0,0,.2)}
+.track-overlay.open .track-modal{transform:translateY(0)}
+.track-close{position:absolute;top:16px;right:16px;width:34px;height:34px;display:flex;align-items:center;justify-content:center;font-size:.95rem;color:var(--ink3);cursor:pointer;transition:color .2s;background:none;border:none}
+.track-close:hover{color:var(--ink)}
+.track-eyebrow{font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:12px}
+.track-title{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:400;color:var(--ink);margin-bottom:8px;line-height:1.15}
+.track-sub{font-size:.78rem;color:var(--ink3);margin-bottom:32px;line-height:1.7}
+.track-field-label{font-size:.63rem;letter-spacing:.15em;text-transform:uppercase;color:var(--ink3);font-weight:500;margin-bottom:8px;display:block}
+.track-input{width:100%;border:1px solid var(--border);padding:14px 16px;font-size:.88rem;font-family:'Inter',sans-serif;color:var(--ink);background:var(--cream);outline:none;transition:border-color .2s;letter-spacing:.06em;margin-bottom:10px}
+.track-input:focus{border-color:var(--ink)}
+.track-input::placeholder{color:var(--ink3);letter-spacing:.04em}
+.track-carrier-row{height:28px;margin-bottom:22px;display:flex;align-items:center;gap:8px;font-size:.7rem;color:var(--ink3);opacity:0;transition:opacity .2s}
+.track-carrier-row.visible{opacity:1}
+.track-carrier-badge{background:var(--cream2);border:1px solid var(--border);padding:3px 10px;font-size:.63rem;letter-spacing:.12em;text-transform:uppercase;font-weight:600;color:var(--ink)}
+.track-btn{background:var(--ink);color:var(--cream);padding:15px;font-size:.73rem;letter-spacing:.16em;text-transform:uppercase;font-weight:600;width:100%;transition:background .2s;cursor:pointer;margin-bottom:18px;border:none}
+.track-btn:hover{background:var(--ink2)}
+.track-btn:disabled{opacity:.4;cursor:not-allowed}
+.track-note{font-size:.67rem;color:var(--ink3);text-align:center;line-height:1.65}
+.track-note a{color:var(--ink);text-decoration:underline;text-underline-offset:2px}
+.track-sep{border:none;border-top:1px solid var(--border);margin:24px 0}
+.track-carriers-row{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.track-carrier-chip{font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(10,10,10,.35);font-weight:500}
+.track-nav-btn{display:flex;align-items:center;gap:6px;padding:7px 14px;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;font-weight:500;color:var(--ink);border:1px solid var(--border);border-radius:100px;cursor:pointer;transition:var(--ease);background:transparent;white-space:nowrap}
+.track-nav-btn:hover{background:var(--ink);color:var(--cream);border-color:var(--ink)}
+@media(max-width:600px){
+  .track-nav-btn span{display:none}
+  .track-modal{padding:36px 24px 28px}
+  .track-title{font-size:1.6rem}
+}
+
 /* CART */
 .cart-overlay{position:fixed;inset:0;background:rgba(12,10,8,.5);z-index:1100;opacity:0;pointer-events:none;transition:opacity .3s}
 .cart-overlay.open{opacity:1;pointer-events:auto}
@@ -382,6 +415,10 @@ footer{background:var(--ink);color:var(--cream);border-top:1px solid rgba(255,25
   </div>
   <a href="#" class="nav-logo">Casa<span>Outlet</span></a>
   <div class="nav-right">
+    <button class="track-nav-btn" onclick="openTracking()" aria-label="Suivre ma commande">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 5v4h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+      <span>Suivi commande</span>
+    </button>
     <button class="cart-btn" onclick="toggleCart()" aria-label="Panier">
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
       <span class="cart-count" id="cartCount">0</span>
@@ -406,6 +443,7 @@ footer{background:var(--ink);color:var(--cream);border-top:1px solid rgba(255,25
     <a href="#faq" onclick="toggleMobileMenu()">FAQ</a>
     <a href="#" onclick="toggleMobileMenu();openLegal('livraison')">Livraison</a>
     <a href="#" onclick="toggleMobileMenu();openLegal('mentions')">Légal</a>
+    <a href="#" onclick="toggleMobileMenu();openTracking()">Suivre ma commande</a>
   </div>
 </div>
 
@@ -636,6 +674,7 @@ footer{background:var(--ink);color:var(--cream);border-top:1px solid rgba(255,25
         <li><a href="#" onclick="openLegal('livraison');return false">Livraison</a></li>
         <li><a href="#" onclick="openLegal('retours');return false">Retours</a></li>
         <li><a href="#" onclick="openLegal('tailles');return false">Guide des tailles</a></li>
+        <li><a href="#" onclick="openTracking();return false">Suivre ma commande</a></li>
       </ul>
     </div>
     <div class="footer-col">
@@ -658,6 +697,32 @@ footer{background:var(--ink);color:var(--cream);border-top:1px solid rgba(255,25
     </div>
   </div>
 </footer>
+
+<!-- TRACKING MODAL -->
+<div class="track-overlay" id="trackOverlay" onclick="closeTrackingOutside(event)">
+  <div class="track-modal" id="trackModal">
+    <button class="track-close" onclick="closeTracking()" aria-label="Fermer">✕</button>
+    <p class="track-eyebrow">Casa Outlet · Livraison</p>
+    <h2 class="track-title">Suivre votre<br><em style="font-style:italic;color:var(--gold)">commande</em></h2>
+    <p class="track-sub">Entrez votre numéro de suivi pour localiser votre colis en temps réel. Vous le trouverez dans votre email de confirmation d'expédition.</p>
+    <label class="track-field-label" for="trackInput">Numéro de suivi</label>
+    <input class="track-input" id="trackInput" type="text" placeholder="ex : 6A12345678901" autocomplete="off" oninput="onTrackInput(this.value)" onkeydown="if(event.key==='Enter')doTrack()">
+    <div class="track-carrier-row" id="trackCarrierRow">
+      <span>Transporteur détecté :</span>
+      <span class="track-carrier-badge" id="trackCarrierBadge">—</span>
+    </div>
+    <button class="track-btn" id="trackBtn" onclick="doTrack()" disabled>Suivre mon colis →</button>
+    <p class="track-note">Votre numéro se trouve dans l'email d'expédition reçu de <strong>contact@casa-outlet.fr</strong>.<br>Pour toute aide : <a href="mailto:contact@casa-outlet.fr">contact@casa-outlet.fr</a></p>
+    <hr class="track-sep">
+    <div class="track-carriers-row">
+      <span class="track-carrier-chip">Colissimo</span>
+      <span class="track-carrier-chip">Chronopost</span>
+      <span class="track-carrier-chip">Mondial Relay</span>
+      <span class="track-carrier-chip">DHL</span>
+      <span class="track-carrier-chip">UPS</span>
+    </div>
+  </div>
+</div>
 
 <!-- MODAL -->
 <div class="modal-overlay" id="modalOverlay" onclick="closeModal(event)">
@@ -993,12 +1058,58 @@ window.addEventListener('scroll',()=>{
   document.getElementById('mainNav').classList.toggle('scrolled',window.scrollY>60);
   document.getElementById('scrollTop').classList.toggle('visible',window.scrollY>400);
 });
-window.addEventListener('keydown',e=>{if(e.key==='Escape'){closeModalBtn();closeQuickBtn();closeLegalBtn();if(document.getElementById('cartOverlay').classList.contains('open'))toggleCart()}});
+window.addEventListener('keydown',e=>{if(e.key==='Escape'){closeModalBtn();closeQuickBtn();closeLegalBtn();closeTracking();if(document.getElementById('cartOverlay').classList.contains('open'))toggleCart()}});
 
 setTimeout(()=>{if(!sessionStorage.getItem('co_popup'))document.getElementById('popupOverlay').classList.add('open')},4000);
 
 renderGrid();
 updateCartUI();
+
+/* ── TRACKING ── */
+function openTracking(){
+  document.getElementById('trackOverlay').classList.add('open');
+  document.body.style.overflow='hidden';
+  setTimeout(()=>document.getElementById('trackInput').focus(),300);
+}
+function closeTracking(){
+  document.getElementById('trackOverlay').classList.remove('open');
+  document.body.style.overflow='';
+}
+function closeTrackingOutside(e){if(e.target===document.getElementById('trackOverlay'))closeTracking()}
+
+function detectCarrier(num){
+  const n=num.trim().toUpperCase();
+  if(!n) return null;
+  if(/^1Z/.test(n)) return {name:'UPS',url:'https://www.ups.com/track?tracknum='};
+  if(/^XK|^XW|^XD|FR$/.test(n)) return {name:'Chronopost',url:'https://www.chronopost.fr/tracking-no-cms/suivi-page?listeNumerosLT='};
+  if(/^JD\d{18}$/.test(n)||/^\d{10}$/.test(n)&&n.startsWith('JD')) return {name:'DHL',url:'https://www.dhl.com/fr-fr/home/tracking.html?tracking-id='};
+  if(/^\d{8}$/.test(n)) return {name:'Mondial Relay',url:'https://www.mondialrelay.fr/suivi-de-colis/?NumColis='};
+  if(n.length===13) return {name:'Colissimo',url:'https://www.laposte.fr/outils/suivre-vos-envois?code='};
+  if(n.length>=10) return {name:'La Poste',url:'https://www.laposte.fr/outils/suivre-vos-envois?code='};
+  return null;
+}
+
+function onTrackInput(val){
+  const carrier=detectCarrier(val);
+  const row=document.getElementById('trackCarrierRow');
+  const badge=document.getElementById('trackCarrierBadge');
+  const btn=document.getElementById('trackBtn');
+  if(carrier && val.trim().length>=8){
+    badge.textContent=carrier.name;
+    row.classList.add('visible');
+    btn.disabled=false;
+  } else {
+    row.classList.remove('visible');
+    btn.disabled=true;
+  }
+}
+
+function doTrack(){
+  const val=document.getElementById('trackInput').value.trim();
+  const carrier=detectCarrier(val);
+  if(!carrier||val.length<8) return;
+  window.open(carrier.url+encodeURIComponent(val),'_blank','noopener');
+}
 </script>
 </body>
 </html>
