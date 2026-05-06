@@ -445,9 +445,9 @@ footer{background:var(--ink);color:var(--cream);border-top:1px solid rgba(255,25
   <div class="mobile-menu-sep"></div>
   <div class="mobile-menu-links">
     <a href="#faq" onclick="toggleMobileMenu()">FAQ</a>
-    <a href="#" onclick="toggleMobileMenu();openLegal('livraison')">Livraison</a>
-    <a href="#" onclick="toggleMobileMenu();openLegal('mentions')">Légal</a>
-    <a href="#" onclick="toggleMobileMenu();openTracking()">Suivre ma commande</a>
+    <a href="#" onclick="toggleMobileMenu();setTimeout(()=>openLegal('livraison'),380);return false">Livraison</a>
+    <a href="#" onclick="toggleMobileMenu();setTimeout(()=>openLegal('mentions'),380);return false">Légal</a>
+    <a href="#" onclick="toggleMobileMenu();setTimeout(openTracking,380);return false">Suivre ma commande</a>
   </div>
 </div>
 
